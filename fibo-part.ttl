@@ -1,0 +1,1599 @@
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix fibo-be-all:  <https://spec.edmcouncil.org/fibo/ontology/BE/AllBE/> .
+@prefix fibo-be-corp-corp:  <https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/> .
+@prefix fibo-be-corp-mod:  <https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/MetadataBECorporations/> .
+@prefix fibo-beeu-all:  <https://spec.edmcouncil.org/fibo/ontology/BE/AllBE-Europe/> .
+@prefix fibo-beeuna-all:  <https://spec.edmcouncil.org/fibo/ontology/BE/AllBE-EuropeAndNorthAmerica/> .
+@prefix fibo-be-fct-fct:  <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> .
+@prefix fibo-be-fct-mod:  <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/MetadataBEFunctionalEntities/> .
+@prefix fibo-be-fct-pub:  <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/Publishers/> .
+@prefix fibo-be-fctx-fne:  <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntitiesExt/FundEntities/> .
+@prefix fibo-be-fctx-mod:  <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntitiesExt/MetadataBEFunctionalEntitiesExt/> .
+@prefix fibo-be-fctx-spv:  <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntitiesExt/SPVs/> .
+@prefix fibo-be-fctx-sta:  <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntitiesExt/StateEntities/> .
+@prefix fibo-be-ge-caj:  <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/NorthAmericanJurisdiction/CAGovernmentEntitiesAndJurisdictions/> .
+@prefix fibo-be-ge-euj:  <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/> .
+@prefix fibo-be-ge-ge:  <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/> .
+@prefix fibo-be-ge-mod:  <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/MetadataBEGovernmentEntities/> .
+@prefix fibo-be-ge-ukj:  <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> .
+@prefix fibo-be-ge-usj:  <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/NorthAmericanJurisdiction/USGovernmentEntitiesAndJurisdictions/> .
+@prefix fibo-be-le-cb:  <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/CorporateBodies/> .
+@prefix fibo-be-le-fbo:  <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/> .
+@prefix fibo-be-le-lei:  <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix fibo-be-le-lp:  <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/> .
+@prefix fibo-be-le-mod:  <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/MetadataBELegalEntities/> .
+@prefix fibo-be-mod:  <https://spec.edmcouncil.org/fibo/ontology/BE/MetadataBE/> .
+@prefix fibo-bena-all:  <https://spec.edmcouncil.org/fibo/ontology/BE/AllBE-NorthAmerica/> .
+@prefix fibo-be-oac-cctl:  <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateControl/> .
+@prefix fibo-be-oac-cown:  <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateOwnership/> .
+@prefix fibo-be-oac-cpty:  <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/ControlParties/> .
+@prefix fibo-be-oac-exec:  <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/Executives/> .
+@prefix fibo-be-oac-mod:  <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/MetadataBEOwnershipAndControl/> .
+@prefix fibo-be-oac-opty:  <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-be-plc-mod:  <https://spec.edmcouncil.org/fibo/ontology/BE/PrivateLimitedCompanies/MetadataBEPrivateLimitedCompanies/> .
+@prefix fibo-be-plc-plc:  <https://spec.edmcouncil.org/fibo/ontology/BE/PrivateLimitedCompanies/PrivateLimitedCompanies/> .
+@prefix fibo-be-ptr-mod:  <https://spec.edmcouncil.org/fibo/ontology/BE/Partnerships/MetadataBEPartnerships/> .
+@prefix fibo-be-ptr-ptr:  <https://spec.edmcouncil.org/fibo/ontology/BE/Partnerships/Partnerships/> .
+@prefix fibo-be-sps-mod:  <https://spec.edmcouncil.org/fibo/ontology/BE/SoleProprietorships/MetadataBESoleProprietorships/> .
+@prefix fibo-be-sps-sps:  <https://spec.edmcouncil.org/fibo/ontology/BE/SoleProprietorships/SoleProprietorships/> .
+@prefix fibo-be-tr-mod:  <https://spec.edmcouncil.org/fibo/ontology/BE/Trusts/MetadataBETrusts/> .
+@prefix fibo-be-tr-tr:  <https://spec.edmcouncil.org/fibo/ontology/BE/Trusts/Trusts/> .
+@prefix fibo-bp-iss-ambs:  <https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/AgencyMBSIssuance/> .
+@prefix fibo-bp-iss-dbti:  <https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/DebtIssuance/> .
+@prefix fibo-bp-iss-doc:  <https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/IssuanceDocuments/> .
+@prefix fibo-bp-iss-ipo:  <https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/EquitiesIPOIssuance/> .
+@prefix fibo-bp-iss-mbs:  <https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/MBSIssuance/> .
+@prefix fibo-bp-iss-mod:  <https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/MetadataBPSecuritiesIssuance/> .
+@prefix fibo-bp-iss-muni:  <https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/MuniIssuance/> .
+@prefix fibo-bp-iss-pmbs:  <https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/PrivateLabelMBSIssuance/> .
+@prefix fibo-bp-iss-prc:  <https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/IssuanceProcess/> .
+@prefix fibo-bp-iss-trm:  <https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/IssuanceProcessTerms/> .
+@prefix fibo-bp-mod:  <https://spec.edmcouncil.org/fibo/ontology/BP/MetadataBP/> .
+@prefix fibo-bp-prc-fcp:  <https://spec.edmcouncil.org/fibo/ontology/BP/Process/FinancialContextAndProcess/> .
+@prefix fibo-bp-prc-mod:  <https://spec.edmcouncil.org/fibo/ontology/BP/Process/MetadataBPProcess/> .
+@prefix fibo-bp-reg-mod:  <https://spec.edmcouncil.org/fibo/ontology/BP/Regulatory/MetadataBPRegulatory/> .
+@prefix fibo-bp-reg-req:  <https://spec.edmcouncil.org/fibo/ontology/BP/Regulatory/RegulatoryRequirements/> .
+@prefix fibo-cae-ce-cae:  <https://spec.edmcouncil.org/fibo/ontology/CAE/CorporateEvents/CorporateActionsEvents/> .
+@prefix fibo-cae-ce-mod:  <https://spec.edmcouncil.org/fibo/ontology/CAE/CorporateEvents/MetadataCAECorporateEvents/> .
+@prefix fibo-cae-mod:  <https://spec.edmcouncil.org/fibo/ontology/CAE/MetadataCAE/> .
+@prefix fibo-civ-fnd-civ:  <https://spec.edmcouncil.org/fibo/ontology/CIV/Funds/CIV/> .
+@prefix fibo-civ-fnd-mod:  <https://spec.edmcouncil.org/fibo/ontology/CIV/Funds/MetadataCIVFunds/> .
+@prefix fibo-civ-mod:  <https://spec.edmcouncil.org/fibo/ontology/CIV/MetadataCIV/> .
+@prefix fibo-der-all:  <https://spec.edmcouncil.org/fibo/ontology/DER/AllDER/> .
+@prefix fibo-der-ass-ass:  <https://spec.edmcouncil.org/fibo/ontology/DER/AssetDerivatives/AssetDerivatives/> .
+@prefix fibo-der-ass-bas:  <https://spec.edmcouncil.org/fibo/ontology/DER/AssetDerivatives/AssetBaskets/> .
+@prefix fibo-der-ass-bo:  <https://spec.edmcouncil.org/fibo/ontology/DER/AssetDerivatives/BondOptions/> .
+@prefix fibo-der-ass-brs:  <https://spec.edmcouncil.org/fibo/ontology/DER/AssetDerivatives/BondReturnSwaps/> .
+@prefix fibo-der-ass-eqf:  <https://spec.edmcouncil.org/fibo/ontology/DER/AssetDerivatives/EquityForwards/> .
+@prefix fibo-der-ass-eqo:  <https://spec.edmcouncil.org/fibo/ontology/DER/AssetDerivatives/EquityOptions/> .
+@prefix fibo-der-ass-eqs:  <https://spec.edmcouncil.org/fibo/ontology/DER/AssetDerivatives/EquitySwaps/> .
+@prefix fibo-der-ass-mod:  <https://spec.edmcouncil.org/fibo/ontology/DER/AssetDerivatives/MetadataDERAssetDerivatives/> .
+@prefix fibo-der-com-com:  <https://spec.edmcouncil.org/fibo/ontology/DER/CommoditiesDerivatives/Commodities/> .
+@prefix fibo-der-com-ctr:  <https://spec.edmcouncil.org/fibo/ontology/DER/CommoditiesDerivatives/CommoditiesContracts/> .
+@prefix fibo-der-com-del:  <https://spec.edmcouncil.org/fibo/ontology/DER/CommoditiesDerivatives/CommoditiesDelivery/> .
+@prefix fibo-der-com-fwd:  <https://spec.edmcouncil.org/fibo/ontology/DER/CommoditiesDerivatives/CommodityForwards/> .
+@prefix fibo-der-com-mod:  <https://spec.edmcouncil.org/fibo/ontology/DER/CommoditiesDerivatives/MetadataDERCommoditiesDerivatives/> .
+@prefix fibo-der-com-opt:  <https://spec.edmcouncil.org/fibo/ontology/DER/CommoditiesDerivatives/CommodityOptions/> .
+@prefix fibo-der-com-sp:  <https://spec.edmcouncil.org/fibo/ontology/DER/CommoditiesDerivatives/CommoditySpots/> .
+@prefix fibo-der-com-sw:  <https://spec.edmcouncil.org/fibo/ontology/DER/CommoditiesDerivatives/CommoditySwaps/> .
+@prefix fibo-der-cr-cds:  <https://spec.edmcouncil.org/fibo/ontology/DER/CreditDerivatives/CreditDefaultSwaps/> .
+@prefix fibo-der-cr-mod:  <https://spec.edmcouncil.org/fibo/ontology/DER/CreditDerivatives/MetadataDERCreditDerivatives/> .
+@prefix fibo-der-der-cof:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/OptionContractsOnFutures/> .
+@prefix fibo-der-der-ex:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/ExerciseConventions/> .
+@prefix fibo-der-der-fwd:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Forwards/> .
+@prefix fibo-der-der-opt:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> .
+@prefix fibo-der-der-rsw:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/ReturnSwaps/> .
+@prefix fibo-der-der-sp:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Spots/> .
+@prefix fibo-der-der-spn:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Swaptions/> .
+@prefix fibo-der-drc-bsc:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesBasics/> .
+@prefix fibo-der-drc-cfd:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/ContractsForDifference/> .
+@prefix fibo-der-drc-ma:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesMasterAgreements/> .
+@prefix fibo-der-drc-mod:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/MetadataDERDerivativesContracts/> .
+@prefix fibo-der-drc-raw:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/RightsAndWarrants/> .
+@prefix fibo-der-drc-swp:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Swaps/> .
+@prefix fibo-der-drc-swpind:  <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/SwapsIndividuals/> .
+@prefix fibo-der-etd-eto:  <https://spec.edmcouncil.org/fibo/ontology/DER/ExchangeTradedDerivatives/ExchangeTradedOptions/> .
+@prefix fibo-der-etd-fstd:  <https://spec.edmcouncil.org/fibo/ontology/DER/ExchangeTradedDerivatives/FuturesStandardizedTerms/> .
+@prefix fibo-der-etd-fut:  <https://spec.edmcouncil.org/fibo/ontology/DER/ExchangeTradedDerivatives/Futures/> .
+@prefix fibo-der-etd-fxc:  <https://spec.edmcouncil.org/fibo/ontology/DER/ExchangeTradedDerivatives/FuturesExchanges/> .
+@prefix fibo-der-etd-mod:  <https://spec.edmcouncil.org/fibo/ontology/DER/ExchangeTradedDerivatives/MetadataDERExchangeTradedDerivatives/> .
+@prefix fibo-der-etd-ostd:  <https://spec.edmcouncil.org/fibo/ontology/DER/ExchangeTradedDerivatives/OptionsStandardizedTerms/> .
+@prefix fibo-der-etd-oxc:  <https://spec.edmcouncil.org/fibo/ontology/DER/ExchangeTradedDerivatives/OptionsExchanges/> .
+@prefix fibo-der-etd-std:  <https://spec.edmcouncil.org/fibo/ontology/DER/ExchangeTradedDerivatives/DerivativesStandardizedTerms/> .
+@prefix fibo-der-fx-ctr:  <https://spec.edmcouncil.org/fibo/ontology/DER/FxDerivatives/FxContracts/> .
+@prefix fibo-der-fx-fwd:  <https://spec.edmcouncil.org/fibo/ontology/DER/FxDerivatives/FxForwards/> .
+@prefix fibo-der-fx-mod:  <https://spec.edmcouncil.org/fibo/ontology/DER/FxDerivatives/MetadataDERFxDerivatives/> .
+@prefix fibo-der-fx-opt:  <https://spec.edmcouncil.org/fibo/ontology/DER/FxDerivatives/FxOptions/> .
+@prefix fibo-der-fx-sp:  <https://spec.edmcouncil.org/fibo/ontology/DER/FxDerivatives/FxSpots/> .
+@prefix fibo-der-fx-sw:  <https://spec.edmcouncil.org/fibo/ontology/DER/FxDerivatives/FxSwaps/> .
+@prefix fibo-der-mod:  <https://spec.edmcouncil.org/fibo/ontology/DER/MetadataDER/> .
+@prefix fibo-der-rat-fra:  <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/ForwardRateAgreements/> .
+@prefix fibo-der-rat-indo:  <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/OTCIndexOptions/> .
+@prefix fibo-der-rat-iro:  <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/IROptions/> .
+@prefix fibo-der-rat-mod:  <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/MetadataDERRateDerivatives/> .
+@prefix fibo-derri-all:  <https://spec.edmcouncil.org/fibo/ontology/DER/AllDER-ReferenceIndividuals/> .
+@prefix fibo-der-rtd-irswp:  <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/IRSwaps/> .
+@prefix fibo-der-rtd-isw:  <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/InflationSwaps/> .
+@prefix fibo-der-rtd-rtd:  <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/> .
+@prefix fibo-fbc-all:  <https://spec.edmcouncil.org/fibo/ontology/FBC/AllFBC/> .
+@prefix fibo-fbc-dae-crf:  <https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/CreditFacilities/> .
+@prefix fibo-fbc-dae-dbt:  <https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/> .
+@prefix fibo-fbc-dae-gty:  <https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Guaranty/> .
+@prefix fibo-fbc-dae-mod:  <https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/MetadataFBCDebtAndEquities/> .
+@prefix fibo-fbceu-all:  <https://spec.edmcouncil.org/fibo/ontology/FBC/AllFBC-Europe/> .
+@prefix fibo-fbceuna-all:  <https://spec.edmcouncil.org/fibo/ontology/FBC/AllFBC-EuropeAndNorthAmerica/> .
+@prefix fibo-fbc-fct-breg:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessRegistries/> .
+@prefix fibo-fbc-fct-cafse:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/CAFinancialServicesEntities/> .
+@prefix fibo-fbc-fct-cajrga:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/CARegulatoryAgencies/> .
+@prefix fibo-fbc-fct-eufse:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/EuropeanEntities/EUFinancialServicesEntities/> .
+@prefix fibo-fbc-fct-eufseind:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/EuropeanEntities/EuropeanFinancialServicesEntitiesIndividuals/> .
+@prefix fibo-fbc-fct-eufsind:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/EuropeanEntities/EuropeanFinancialServicesEntitiesIndividuals/> .
+@prefix fibo-fbc-fct-eurga:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/EuropeanEntities/EURegulatoryAgencies/> .
+@prefix fibo-fbc-fct-fse:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fbc-fct-mkt:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/> .
+@prefix fibo-fbc-fct-mod:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/MetadataFBCFunctionalEntities/> .
+@prefix fibo-fbc-fct-ra:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegistrationAuthorities/> .
+@prefix fibo-fbc-fct-rga:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegulatoryAgencies/> .
+@prefix fibo-fbc-fct-usfse:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USFinancialServicesEntities/> .
+@prefix fibo-fbc-fct-usfsind:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USFinancialServicesEntitiesIndividuals/> .
+@prefix fibo-fbc-fct-usind:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USExampleIndividuals/> .
+@prefix fibo-fbc-fct-usjrga:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies/> .
+@prefix fibo-fbc-fi-fi:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/> .
+@prefix fibo-fbc-fi-mod:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/MetadataFBCFinancialInstruments/> .
+@prefix fibo-fbc-fi-stl:  <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/Settlement/> .
+@prefix fibo-fbc-mod:  <https://spec.edmcouncil.org/fibo/ontology/FBC/MetadataFBC/> .
+@prefix fibo-fbcna-all:  <https://spec.edmcouncil.org/fibo/ontology/FBC/AllFBC-NorthAmerica/> .
+@prefix fibo-fbcnaex-all:  <https://spec.edmcouncil.org/fibo/ontology/FBC/AllFBC-NorthAmericanExamples/> .
+@prefix fibo-fbc-pas-caa:  <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/> .
+@prefix fibo-fbc-pas-fpas:  <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/> .
+@prefix fibo-fbc-pas-mod:  <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/MetadataFBCProductsAndServices/> .
+@prefix fibo-fnd-aap-agt:  <https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/> .
+@prefix fibo-fnd-aap-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/MetadataFNDAgentsAndPeople/> .
+@prefix fibo-fnd-aap-ppl:  <https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/> .
+@prefix fibo-fnd-acc-4217:  <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/ISO4217-CurrencyCodes/> .
+@prefix fibo-fnd-acc-aeq:  <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/AccountingEquity/> .
+@prefix fibo-fnd-acc-cur:  <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-acc-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/MetadataFNDAccounting/> .
+@prefix fibo-fnd-acc-val:  <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/Valuation/> .
+@prefix fibo-fnd-accx-acc:  <https://spec.edmcouncil.org/fibo/ontology/FND/AccountingExt/AccountsMain/> .
+@prefix fibo-fnd-accx-assx:  <https://spec.edmcouncil.org/fibo/ontology/FND/AccountingExt/AssetExtensions/> .
+@prefix fibo-fnd-accx-bal:  <https://spec.edmcouncil.org/fibo/ontology/FND/AccountingExt/BalanceSheetBalances/> .
+@prefix fibo-fnd-accx-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/AccountingExt/MetadataFNDAccountingExt/> .
+@prefix fibo-fnd-accx-tax:  <https://spec.edmcouncil.org/fibo/ontology/FND/AccountingExt/Taxation/> .
+@prefix fibo-fnd-agr-agr:  <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/> .
+@prefix fibo-fnd-agr-ctr:  <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/> .
+@prefix fibo-fnd-agr-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/MetadataFNDAgreements/> .
+@prefix fibo-fnd-agrx-ele:  <https://spec.edmcouncil.org/fibo/ontology/FND/AgreementsExt/ContractElements/> .
+@prefix fibo-fnd-agrx-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/AgreementsExt/MetadataFNDAgreementsExt/> .
+@prefix fibo-fnd-all:  <https://spec.edmcouncil.org/fibo/ontology/FND/AllFND/> .
+@prefix fibo-fnd-arr-arr:  <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/> .
+@prefix fibo-fnd-arr-cd:  <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Codes/> .
+@prefix fibo-fnd-arr-cls:  <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/ClassificationSchemes/> .
+@prefix fibo-fnd-arr-com:  <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Communications/> .
+@prefix fibo-fnd-arr-doc:  <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/> .
+@prefix fibo-fnd-arr-id:  <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> .
+@prefix fibo-fnd-arr-lif:  <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> .
+@prefix fibo-fnd-arr-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/MetadataFNDArrangements/> .
+@prefix fibo-fnd-arr-rep:  <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/> .
+@prefix fibo-fnd-arrx-qtux:  <https://spec.edmcouncil.org/fibo/ontology/FND/QuantitiesExt/QuantitiesAndUnitsExt/> .
+@prefix fibo-fnd-arrxx-ins:  <https://spec.edmcouncil.org/fibo/ontology/FND/ArrangementsExt/ToolsAndInstruments/> .
+@prefix fibo-fnd-arrxx-meth:  <https://spec.edmcouncil.org/fibo/ontology/FND/ArrangementsExt/MethodsAndRules/> .
+@prefix fibo-fnd-arrxx-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/ArrangementsExt/MetadataFNDArrangementsExt/> .
+@prefix fibo-fnd-bus-agc:  <https://spec.edmcouncil.org/fibo/ontology/FND/BusinessExt/AgentsContexts/> .
+@prefix fibo-fnd-bus-bg:  <https://spec.edmcouncil.org/fibo/ontology/FND/BusinessExt/BusinessGoals/> .
+@prefix fibo-fnd-bus-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/BusinessExt/MetadataFNDBusinessExt/> .
+@prefix fibo-fnd-bus-pol:  <https://spec.edmcouncil.org/fibo/ontology/FND/BusinessExt/Policy/> .
+@prefix fibo-fnd-dt-bd:  <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/BusinessDates/> .
+@prefix fibo-fnd-dt-fd:  <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-dt-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/MetadataFNDDatesAndTimes/> .
+@prefix fibo-fnd-dt-oc:  <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/> .
+@prefix fibo-fnd-gao-gl:  <https://spec.edmcouncil.org/fibo/ontology/FND/GoalsAndObjectives/Goals/> .
+@prefix fibo-fnd-gao-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/GoalsAndObjectives/MetadataFNDGoalsAndObjectives/> .
+@prefix fibo-fnd-gao-obj:  <https://spec.edmcouncil.org/fibo/ontology/FND/GoalsAndObjectives/Objectives/> .
+@prefix fibo-fnd-inf-doc:  <https://spec.edmcouncil.org/fibo/ontology/FND/InformationExt/Documentation/> .
+@prefix fibo-fnd-inf-inf:  <https://spec.edmcouncil.org/fibo/ontology/FND/InformationExt/InfoCore/> .
+@prefix fibo-fnd-inf-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/InformationExt/MetadataFNDInformationExt/> .
+@prefix fibo-fnd-inf-msg:  <https://spec.edmcouncil.org/fibo/ontology/FND/InformationExt/Messaging/> .
+@prefix fibo-fnd-inf-padr:  <https://spec.edmcouncil.org/fibo/ontology/FND/InformationExt/PostalAddress/> .
+@prefix fibo-fnd-inf-tem:  <https://spec.edmcouncil.org/fibo/ontology/FND/InformationExt/TemporalInfo/> .
+@prefix fibo-fnd-law-cor:  <https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCore/> .
+@prefix fibo-fnd-law-jur:  <https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/> .
+@prefix fibo-fnd-law-lcap:  <https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCapacity/> .
+@prefix fibo-fnd-law-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/Law/MetadataFNDLaw/> .
+@prefix fibo-fnd-lawx-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/LawExt/MetadataFNDLawExt/> .
+@prefix fibo-fnd-lawx-rst:  <https://spec.edmcouncil.org/fibo/ontology/FND/LawExt/RegulatoryRestrictions/> .
+@prefix fibo-fnd-math-amt:  <https://spec.edmcouncil.org/fibo/ontology/FND/MathExt/Amounts/> .
+@prefix fibo-fnd-math-math:  <https://spec.edmcouncil.org/fibo/ontology/FND/MathExt/Math/> .
+@prefix fibo-fnd-math-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/MathExt/MetadataFNDMathExt/> .
+@prefix fibo-fnd-math-qty:  <https://spec.edmcouncil.org/fibo/ontology/FND/MathExt/Quantities/> .
+@prefix fibo-fnd-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/MetadataFND/> .
+@prefix fibo-fnd-oac-ctl:  <https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Control/> .
+@prefix fibo-fnd-oac-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/MetadataFNDOwnershipAndControl/> .
+@prefix fibo-fnd-oac-oac:  <https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/OwnershipAndControl/> .
+@prefix fibo-fnd-oac-own:  <https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Ownership/> .
+@prefix fibo-fnd-org-fm:  <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/> .
+@prefix fibo-fnd-org-lg:  <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/LegitimateOrganizations/> .
+@prefix fibo-fnd-org-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/MetadataFNDOrganizations/> .
+@prefix fibo-fnd-org-org:  <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> .
+@prefix fibo-fnd-pas-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/MetadataFNDProductsAndServices/> .
+@prefix fibo-fnd-pas-pas:  <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/> .
+@prefix fibo-fnd-pas-psch:  <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> .
+@prefix fibo-fnd-phy-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/PhysicalExt/MetadataFNDPhysicalExt/> .
+@prefix fibo-fnd-phy-phy:  <https://spec.edmcouncil.org/fibo/ontology/FND/PhysicalExt/Physical/> .
+@prefix fibo-fnd-plc-adr:  <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/> .
+@prefix fibo-fnd-plc-cty:  <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Countries/> .
+@prefix fibo-fnd-plc-fac:  <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Facilities/> .
+@prefix fibo-fnd-plc-loc:  <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/> .
+@prefix fibo-fnd-plc-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/Places/MetadataFNDPlaces/> .
+@prefix fibo-fnd-plc-vrt:  <https://spec.edmcouncil.org/fibo/ontology/FND/Places/VirtualPlaces/> .
+@prefix fibo-fnd-plcx-gph:  <https://spec.edmcouncil.org/fibo/ontology/FND/PlacesExt/Geophysical/> .
+@prefix fibo-fnd-plcx-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/PlacesExt/MetadataFNDPlacesExt/> .
+@prefix fibo-fnd-plcx-re:  <https://spec.edmcouncil.org/fibo/ontology/FND/PlacesExt/RealEstate/> .
+@prefix fibo-fnd-plcx-sit:  <https://spec.edmcouncil.org/fibo/ontology/FND/PlacesExt/AddressSites/> .
+@prefix fibo-fnd-pty-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/MetadataFNDParties/> .
+@prefix fibo-fnd-pty-pty:  <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/> .
+@prefix fibo-fnd-pty-rl:  <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/> .
+@prefix fibo-fnd-ptyx-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/PartiesExt/MetadataFNDPartiesExt/> .
+@prefix fibo-fnd-ptyx-prc:  <https://spec.edmcouncil.org/fibo/ontology/FND/PartiesExt/PartyRoleContext/> .
+@prefix fibo-fnd-ptyx-ptyx:  <https://spec.edmcouncil.org/fibo/ontology/FND/PartiesExt/PartyExtensions/> .
+@prefix fibo-fnd-pub-con:  <https://spec.edmcouncil.org/fibo/ontology/FND/PublicationsExt/Conventions/> .
+@prefix fibo-fnd-pub-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/PublicationsExt/MetadataFNDPublicationsExt/> .
+@prefix fibo-fnd-pub-pub:  <https://spec.edmcouncil.org/fibo/ontology/FND/PublicationsExt/Publications/> .
+@prefix fibo-fnd-pub-std:  <https://spec.edmcouncil.org/fibo/ontology/FND/PublicationsExt/Standards/> .
+@prefix fibo-fnd-pub-stdi:  <https://spec.edmcouncil.org/fibo/ontology/FND/PublicationsExt/StandardsIndividuals/> .
+@prefix fibo-fnd-qt-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/MetadataFNDQuantities/> .
+@prefix fibo-fnd-qt-qtu:  <https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/> .
+@prefix fibo-fnd-quax-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/QuantitiesExt/MetadataFNDQuantitiesExt/> .
+@prefix fibo-fnd-quax-qua:  <https://spec.edmcouncil.org/fibo/ontology/FND/QuantitiesExt/QuantitiesExt/> .
+@prefix fibo-fnd-rel-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/MetadataFNDRelations/> .
+@prefix fibo-fnd-rel-rel:  <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-risk-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/RiskExt/MetadataFNDRiskExt/> .
+@prefix fibo-fnd-risk-risk:  <https://spec.edmcouncil.org/fibo/ontology/FND/RiskExt/Risk/> .
+@prefix fibo-fnd-tim-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/TimeExt/MetadataFNDTimeExt/> .
+@prefix fibo-fnd-tim-tim:  <https://spec.edmcouncil.org/fibo/ontology/FND/TimeExt/Time/> .
+@prefix fibo-fnd-txn-acc:  <https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/TransactionAccounting/> .
+@prefix fibo-fnd-txn-cle:  <https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/REAClaimsEvents/> .
+@prefix fibo-fnd-txn-ecr:  <https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/EconomicResources/> .
+@prefix fibo-fnd-txn-ev:  <https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/TransactionEvents/> .
+@prefix fibo-fnd-txn-mkt:  <https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/MarketTransactions/> .
+@prefix fibo-fnd-txn-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/MetadataFNDTransactionsExt/> .
+@prefix fibo-fnd-txn-qr:  <https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/QuantifiedResources/> .
+@prefix fibo-fnd-txn-rea:  <https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/REATransactions/> .
+@prefix fibo-fnd-txn-sec:  <https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/SecuritiesTransactions/> .
+@prefix fibo-fnd-txn-sup:  <https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/SupplyTransactions/> .
+@prefix fibo-fnd-txn-txnx:  <https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/TransactionsExtended/> .
+@prefix fibo-fnd-utl-alx:  <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix fibo-fnd-utl-av:  <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix fibo-fnd-utl-mod:  <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/MetadataFNDUtilities/> .
+@prefix fibo-fnd-utl-val:  <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/> .
+@prefix fibo-ind-all:  <https://spec.edmcouncil.org/fibo/ontology/IND/AllIND/> .
+@prefix fibo-ind-ei-caei:  <https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/NorthAmericanIndicators/CAEconomicIndicators/> .
+@prefix fibo-ind-ei-ei:  <https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/> .
+@prefix fibo-ind-ei-mod:  <https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/MetadataINDEconomicIndicators/> .
+@prefix fibo-ind-ei-pub:  <https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicatorPublishers/> .
+@prefix fibo-ind-ei-usei:  <https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/NorthAmericanIndicators/USEconomicIndicators/> .
+@prefix fibo-ind-fx-fx:  <https://spec.edmcouncil.org/fibo/ontology/IND/ForeignExchange/ForeignExchange/> .
+@prefix fibo-ind-fx-mod:  <https://spec.edmcouncil.org/fibo/ontology/IND/ForeignExchange/MetadataINDForeignExchange/> .
+@prefix fibo-ind-ind-ind:  <https://spec.edmcouncil.org/fibo/ontology/IND/Indicators/Indicators/> .
+@prefix fibo-ind-ind-mod:  <https://spec.edmcouncil.org/fibo/ontology/IND/Indicators/MetadataINDIndicators/> .
+@prefix fibo-ind-ir-cm:  <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/CommonInterestRates/> .
+@prefix fibo-ind-ir-ir:  <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> .
+@prefix fibo-ind-ir-mod:  <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MetadataINDInterestRates/> .
+@prefix fibo-ind-ir-pub:  <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRatePublishers/> .
+@prefix fibo-ind-mkt-bas:  <https://spec.edmcouncil.org/fibo/ontology/IND/MarketIndices/BasketIndices/> .
+@prefix fibo-ind-mkt-mod:  <https://spec.edmcouncil.org/fibo/ontology/IND/MarketIndices/MetadataINDMarketIndices/> .
+@prefix fibo-ind-mod:  <https://spec.edmcouncil.org/fibo/ontology/IND/MetadataIND/> .
+@prefix fibo-indna-all:  <https://spec.edmcouncil.org/fibo/ontology/IND/AllIND-NorthAmerica/> .
+@prefix fibo-indrr-all:  <https://spec.edmcouncil.org/fibo/ontology/IND/AllIND-ReferenceRates/> .
+@prefix fibo-ln-ln-hmda:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanContracts/LoanHMDA/> .
+@prefix fibo-ln-ln-lgn:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanContracts/LoanGeneric/> .
+@prefix fibo-ln-ln-ln:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanContracts/LoanCore/> .
+@prefix fibo-loan-all:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/AllLOAN/> .
+@prefix fibo-loan-ln-hmda:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanContracts/LoanHMDA/> .
+@prefix fibo-loan-ln-lgn:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanContracts/LoanGeneric/> .
+@prefix fibo-loan-ln-ln:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanContracts/LoanCore/> .
+@prefix fibo-loan-ln-mod:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanContracts/MetadataLOANLoanContracts/> .
+@prefix fibo-loan-loan-col:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/Loans/LoansCollateral/> .
+@prefix fibo-loan-loan-gen:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/Loans/LoansGeneral/> .
+@prefix fibo-loan-loan-gty:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/Loans/LoansGuaranties/> .
+@prefix fibo-loan-loan-loan:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/Loans/LoanBasicTerms/> .
+@prefix fibo-loan-loan-mod:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/Loans/MetadataLOANLoans/> .
+@prefix fibo-loan-loan-pty:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/Loans/LoansParties/> .
+@prefix fibo-loan-loan-reg:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/Loans/LoansRegulatory/> .
+@prefix fibo-loan-mod:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/MetadataLOAN/> .
+@prefix fibo-loan-tem-app:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansTemporal/LoanApplicationsTemporal/> .
+@prefix fibo-loan-tem-apr:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansTemporal/LoansAppraisal/> .
+@prefix fibo-loan-tem-bor:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansTemporal/LoanBorrowersTemporal/> .
+@prefix fibo-loan-tem-cl:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansTemporal/ConstructionLoansTemporal/> .
+@prefix fibo-loan-tem-col:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansTemporal/LoanCollateralTemporal/> .
+@prefix fibo-loan-tem-ev:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansTemporal/LoansEvents/> .
+@prefix fibo-loan-tem-ltv:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansTemporal/LoansLTV/> .
+@prefix fibo-loan-tem-mod:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansTemporal/MetadataLOANLoansTemporal/> .
+@prefix fibo-loan-tem-ph:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansTemporal/LoanPhases/> .
+@prefix fibo-loan-tem-sta:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansTemporal/LoansStatus/> .
+@prefix fibo-loan-tem-tem:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansTemporal/LoansTemporal/> .
+@prefix fibo-loan-typ-cl:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanTypes/ConstructionLoans/> .
+@prefix fibo-loan-typ-com:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanTypes/CommercialLoans/> .
+@prefix fibo-loan-typ-cr:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanTypes/CreditProducts/> .
+@prefix fibo-loan-typ-gen:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanTypes/GeneralLoans/> .
+@prefix fibo-loan-typ-mod:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanTypes/MetadataLOANLoanTypes/> .
+@prefix fibo-loan-typ-mtg:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanTypes/MortgageLoans/> .
+@prefix fibo-loan-typ-per:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanTypes/PersonalLoans/> .
+@prefix fibo-loan-typ-prod:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanTypes/LoanProducts/> .
+@prefix fibo-loan-typ-sec:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanTypes/SecuredLoans/> .
+@prefix fibo-loan-typ-stu:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanTypes/StudentLoans/> .
+@prefix fibo-loan-typ-uns:  <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoanTypes/UnsecuredLoans/> .
+@prefix fibo-md-civx-fun:  <https://spec.edmcouncil.org/fibo/ontology/MD/CIVTemporal/FundsTemporal/> .
+@prefix fibo-md-civx-mod:  <https://spec.edmcouncil.org/fibo/ontology/MD/CIVTemporal/MetadataMDCIVTemporal/> .
+@prefix fibo-md-dbtx-aly:  <https://spec.edmcouncil.org/fibo/ontology/MD/DebtTemporal/DebtAnalytics/> .
+@prefix fibo-md-dbtx-int:  <https://spec.edmcouncil.org/fibo/ontology/MD/DebtTemporal/DebtInterestAmounts/> .
+@prefix fibo-md-dbtx-mod:  <https://spec.edmcouncil.org/fibo/ontology/MD/DebtTemporal/MetadataMDDebtTemporal/> .
+@prefix fibo-md-dbtx-py:  <https://spec.edmcouncil.org/fibo/ontology/MD/DebtTemporal/DebtPricingYields/> .
+@prefix fibo-md-dbtx-red:  <https://spec.edmcouncil.org/fibo/ontology/MD/DebtTemporal/DebtRedemptionAmounts/> .
+@prefix fibo-md-der-fut:  <https://spec.edmcouncil.org/fibo/ontology/MD/DerivativesTemporal/FuturesTemporal/> .
+@prefix fibo-md-derx-eto:  <https://spec.edmcouncil.org/fibo/ontology/MD/DerivativesTemporal/ETOptionsTemporal/> .
+@prefix fibo-md-derx-mod:  <https://spec.edmcouncil.org/fibo/ontology/MD/DerivativesTemporal/MetadataMDDerivativesTemporal/> .
+@prefix fibo-md-eqx-mod:  <https://spec.edmcouncil.org/fibo/ontology/MD/EquityTemporal/MetadataMDEquityTemporal/> .
+@prefix fibo-md-eqx-pri:  <https://spec.edmcouncil.org/fibo/ontology/MD/EquityTemporal/EquityPricing/> .
+@prefix fibo-md-mod:  <https://spec.edmcouncil.org/fibo/ontology/MD/MetadataMD/> .
+@prefix fibo-md-temx-cre:  <https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/CreditEvents/> .
+@prefix fibo-md-temx-crr:  <https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/CreditRatings/> .
+@prefix fibo-md-temx-crs:  <https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/SecurityCreditStatuses/> .
+@prefix fibo-md-temx-cur:  <https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/AnalysisCurves/> .
+@prefix fibo-md-temx-ins:  <https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/InstrumentTemporalTerms/> .
+@prefix fibo-md-temx-mod:  <https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/MetadataMDTemporalCore/> .
+@prefix fibo-md-temx-tem:  <https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/TemporalConcepts/> .
+@prefix fibo-md-temx-trs:  <https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/SecurityTradingStatuses/> .
+@prefix fibo-sec-all:  <https://spec.edmcouncil.org/fibo/ontology/SEC/AllSEC/> .
+@prefix fibo-sec-dbt-ab-abs:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/AssetBacked/AssetBackedSecurities/> .
+@prefix fibo-sec-dbt-ab-cbo:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/AssetBacked/CBOs/> .
+@prefix fibo-sec-dbt-ab-cdo:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/AssetBacked/CDOs/> .
+@prefix fibo-sec-dbt-ab-clo:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/AssetBacked/CLOs/> .
+@prefix fibo-sec-dbt-ab-cmo:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/AssetBacked/CMOs/> .
+@prefix fibo-sec-dbt-ab-mbs:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/AssetBacked/MortgageBackedSecurities/> .
+@prefix fibo-sec-dbt-ab-mod:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/AssetBacked/MetadataSECDebtAssetBacked/> .
+@prefix fibo-sec-dbt-ab-pbs:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/AssetBacked/PoolBackedSecurities/> .
+@prefix fibo-sec-dbt-ab-spv:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/AssetBacked/AssetBackedSPVs/> .
+@prefix fibo-sec-dbt-ab-syn:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/AssetBacked/SyntheticCDOs/> .
+@prefix fibo-sec-dbt-bo-bo:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/BondsCommon/> .
+@prefix fibo-sec-dbt-bo-cft:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/BondsCashflowTerms/> .
+@prefix fibo-sec-dbt-bo-cfv:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/BondsCashflowVariants/> .
+@prefix fibo-sec-dbt-bo-iss:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/BondsIssuerVariants/> .
+@prefix fibo-sec-dbt-bo-li:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/BondsListings/> .
+@prefix fibo-sec-dbt-bo-mod:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/MetadataSECDebtBonds/> .
+@prefix fibo-sec-dbt-bo-str:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/STRIPs/> .
+@prefix fibo-sec-dbt-bo-tax:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/BondsTaxTreatment/> .
+@prefix fibo-sec-dbt-dbt-cft:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/DebtFoundations/DebtCashflowTerms/> .
+@prefix fibo-sec-dbt-dbt-fin:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/DebtFoundations/DebtFinance/> .
+@prefix fibo-sec-dbt-dbt-gty:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/DebtFoundations/DebtInstrumentGuaranties/> .
+@prefix fibo-sec-dbt-dbti:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/DebtInstruments/> .
+@prefix fibo-sec-dbt-dbt-iss:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/DebtFoundations/DebtIssuanceTerms/> .
+@prefix fibo-sec-dbt-dbt-mod:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/DebtFoundations/MetadataSECDebtDebtFoundations/> .
+@prefix fibo-sec-dbt-dbt-pn:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/DebtFoundations/ParticipationNotes/> .
+@prefix fibo-sec-dbt-mm-lpn:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/MoneyMarkets/LoanParticipationNotes/> .
+@prefix fibo-sec-dbt-mm-mod:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/MoneyMarkets/MetadataSECDebtMoneyMarkets/> .
+@prefix fibo-sec-dbt-mm-repo:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/MoneyMarkets/REPOs/> .
+@prefix fibo-sec-dbt-mm-td:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/MoneyMarkets/TermDeposits/> .
+@prefix fibo-sec-dbt-mm-trd:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/MoneyMarkets/TradedShortTermDebt/> .
+@prefix fibo-sec-dbt-mod:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/MetadataSECDebt/> .
+@prefix fibo-sec-eq-dr:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Equities/DepositaryReceipts/> .
+@prefix fibo-sec-eq-eq:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Equities/EquityInstruments/> .
+@prefix fibo-sec-eq-mod:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Equities/MetadataSECEquities/> .
+@prefix fibo-sec-eq-sha:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Equities/ShareTerms/> .
+@prefix fibo-sec-mod:  <https://spec.edmcouncil.org/fibo/ontology/SEC/MetadataSEC/> .
+@prefix fibo-secri-all:  <https://spec.edmcouncil.org/fibo/ontology/SEC/AllSEC-ReferenceIndividuals/> .
+@prefix fibo-sec-sec-ast:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecurityAssets/> .
+@prefix fibo-sec-sec-bsk:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/Baskets/> .
+@prefix fibo-sec-sec-cls:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesClassification/> .
+@prefix fibo-sec-sec-id:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIdentification/> .
+@prefix fibo-sec-sec-idind:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIdentificationIndividuals/> .
+@prefix fibo-sec-sec-iss:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> .
+@prefix fibo-sec-sec-lst:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesListings/> .
+@prefix fibo-sec-sec-mod:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/MetadataSECSecurities/> .
+@prefix fibo-sec-sec-pls:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/Pools/> .
+@prefix fibo-sec-sec-rst:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesRestrictions/> .
+@prefix fibo-sec-sec-sch:  <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/ParametricSchedules/> .
+@prefix fibo-spec:  <https://spec.edmcouncil.org/fibo/ontology/MetadataFIBO/> .
+@prefix fibo-v-be:  <https://spec.edmcouncil.org/fibo/BE/vocabulary#> .
+@prefix fibo-v-bp:  <https://spec.edmcouncil.org/fibo/BP/vocabulary#> .
+@prefix fibo-v-cae:  <https://spec.edmcouncil.org/fibo/CAE/vocabulary#> .
+@prefix fibo-v-civ:  <https://spec.edmcouncil.org/fibo/CIV/vocabulary#> .
+@prefix fibo-v-core:  <https://spec.edmcouncil.org/fibo/core/vocabulary#> .
+@prefix fibo-v-datatypes:  <https://spec.edmcouncil.org/fibo/vocabulary/2001#> .
+@prefix fibo-v-der:  <https://spec.edmcouncil.org/fibo/DER/vocabulary#> .
+@prefix fibo-v-fbc:  <https://spec.edmcouncil.org/fibo/FBC/vocabulary#> .
+@prefix fibo-v-fnd:  <https://spec.edmcouncil.org/fibo/FND/vocabulary#> .
+@prefix fibo-v-ind:  <https://spec.edmcouncil.org/fibo/IND/vocabulary#> .
+@prefix fibo-v-loan:  <https://spec.edmcouncil.org/fibo/LOAN/vocabulary#> .
+@prefix fibo-v-md:  <https://spec.edmcouncil.org/fibo/MD/vocabulary#> .
+@prefix fibo-vocabulary:  <https://spec.edmcouncil.org/fibo/vocabulary#> .
+@prefix fibo-v-sec:  <https://spec.edmcouncil.org/fibo/SEC/vocabulary#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm:  <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+fibo-vocabulary:hasDomain
+        rdf:type            owl:AnnotationProperty ;
+        rdfs:label          "has domain" ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  dct:subject .
+
+fibo-vocabulary:hasSubDomain
+        rdf:type            owl:AnnotationProperty ;
+        rdfs:label          "has subdomain" ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  dct:subject .
+
+fibo-v-sec:PutNotificationProvision
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-sec-dbt-dbti:PutNotificationProvision ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/SEC/AboutSEC/SECSpecification> ;
+        skos:broader                  fibo-v-sec:TradableDebtInstrumentRedemptionProvision ;
+        skos:definition               "a provision of a put feature defining notification requirements" ;
+        skos:prefLabel                "Put Notification Provision"@en ;
+        fibo-v-fnd:hasDatePeriod      fibo-v-sec:PutWindow ;
+        fibo-vocabulary:hasDomain     "Securities" ;
+        fibo-vocabulary:hasSubDomain  "Debt" .
+
+fibo-v-ind:EUR-6M_EURIBOR_SWAP-EUREX_vs_LCH-ICAP
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:EUR-6M_EURIBOR_SWAP-EUREX_vs_LCH-ICAP ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:definition               "the FpML floating interest index for EUR-6M EURIBOR SWAP-EUREX vs LCH-ICAP" ;
+        skos:prefLabel                "EUR-6M EURIBOR SWAP-EUREX Vs LCH-ICAP"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-ind:USD-Municipal_Swap_Libor_Ratio-11_00-ICAP
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:USD-Municipal_Swap_Libor_Ratio-11_00-ICAP ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:definition               "the FpML floating interest index for USD-Municipal Swap Libor Ratio-11:00-ICAP" ;
+        skos:prefLabel                "USD-Municipal Swap Libor Ratio-11:00-ICAP"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-fnd:DelegatedLegalAuthority
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-law-lcap:DelegatedLegalAuthority ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:LegalCapacity ;
+        skos:definition               "institutionalized and legal power inherent in a particular job, function, or position that is meant to enable its holder to successfully carry out his or her responsibilities, where such power has been delegated through some formal means" ;
+        skos:prefLabel                "Delegated Legal Authority"@en ;
+        skos:scopeNote                "This specifically means the authority to make legally binding commitments." ;
+        fibo-fnd-utl-av:explanatoryNote  "This is always accompanied by an equal responsibility for one's actions or a failure to act." ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Law" .
+
+fibo-v-fnd:ContractualCapability
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-law-lcap:ContractualCapability ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:LegalCapacity ;
+        skos:definition               "the capacity to enter into legally binding contracts" ;
+        skos:editorialNote            "This is the capacity which defines Contractually Capable Entity (sometimes labeled as 'Legal Entity') as distinct from 'Legal Person'. In the latter case the liabilities incurred in the contract accrue also to the Legal Person. In the case of contractual capability, the entity has the authority to enter into contracts, whether or not the liabilities accrue to that same entity (which they do if it is also a Legal Person). For Legal Entities which are not Legal Persons, the liability unwinds to some legal person within the structure of the entity, for example a General Partner or a Trustee." ;
+        skos:prefLabel                "Contractual Capability"@en ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Law" .
+
+fibo-v-fnd:Rate  rdf:type             skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-qt-qtu:Rate ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:Quantity ;
+        skos:definition               "a quantity measured with respect to some other quantity" ;
+        skos:prefLabel                "Rate"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.thefreedictionary.com/rate" ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.icoachmath.com/math_dictionary/rate.html" ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Quantities" .
+
+fibo-v-be:JointControllingParty
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-be-oac-cpty:JointControllingParty ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/BE/AboutBE/BESpecification> ;
+        skos:broader                  fibo-v-be:EntityControllingParty ;
+        skos:definition               "Some group of entities which collectively are able to direct the affairs of some business organization" ;
+        skos:prefLabel                "Joint Controlling Party"@en ;
+        fibo-v-fnd:hasIdentity        fibo-v-be:ControllingAlliance ;
+        fibo-vocabulary:hasDomain     "Business Entities" ;
+        fibo-vocabulary:hasSubDomain  "OwnershipAndControl" .
+
+fibo-v-fbc:RegistryIdentifier
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fbc-fct-ra:RegistryIdentifier ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:broader                  fibo-v-fnd:Identifier ;
+        skos:definition               "an identifier associated with an entry in a registry, i.e., one that provides an index to the registry for the identified item" ;
+        skos:prefLabel                "Registry Identifier"@en ;
+        fibo-v-fbc:isRegisteredIn     fibo-v-fbc:Registry ;
+        fibo-v-fnd:isIndexTo          fibo-v-fbc:Registry ;
+        fibo-fnd-utl-av:adaptedFrom   "ISO/IEC 11179-3 Information technology - Metadata registries (MDR) - Part 3: Registry metamodel and basic attributes, Third edition, 2013-02-15" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "FunctionalEntities" .
+
+fibo-v-ind:EUR-LIBOR-BBA-Bloomberg
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:EUR-LIBOR-BBA-Bloomberg ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:definition               "the FpML floating interest index for EUR-LIBOR-BBA-Bloomberg" ;
+        skos:prefLabel                "EUR-LIBOR-BBA-Bloomberg"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-ind:NZD-BBR-Reference_Banks
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:NZD-BBR-Reference_Banks ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:definition               "the FpML floating interest index for NZD-BBR-Reference Banks" ;
+        skos:prefLabel                "NZD-BBR-Reference Banks"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-ind:CAD-LIBOR-BBA-Bloomberg
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:CAD-LIBOR-BBA-Bloomberg ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:definition               "the FpML floating interest index for CAD-LIBOR-BBA-Bloomberg" ;
+        skos:prefLabel                "CAD-LIBOR-BBA-Bloomberg"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-fnd:AmountOfMoney
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-acc-cur:AmountOfMoney ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:altLabel                 "cash" ;
+        skos:broader                  fibo-v-fnd:QuantityValue ;
+        skos:definition               "a sum of money" ;
+        skos:editorialNote            "This is an actual sum of money, not the measure of a sum of money in monetary units, although it has the same basic properties (decimal number with a currenct unit)." ;
+        skos:prefLabel                "Amount Of Money"@en ;
+        fibo-v-fnd:hasBaseMoneyUnit   fibo-v-fnd:Currency ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Accounting" .
+
+fibo-v-ind:CanadianProducerPriceIndex
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ei-caei:CanadianProducerPriceIndex ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-ind:ProducerPriceIndex ;
+        skos:definition               "an economic indicator representing a measure of the change over time in the prices of a fixed-basket of domestic producer goods and services" ;
+        skos:prefLabel                "Canadian Producer Price Index"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www23.statcan.gc.ca/imdb-bmdi/pub/indexth-eng.htm" ;
+        fibo-fnd-utl-av:explanatoryNote  "Note that Canada does not produce a high level, cross industry PPI per se. Canadian PPIs are published by industry sector. Three of the most important are captured in the union defined herein, which may be expanded over time to integrate others, as needed." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "EconomicIndicators" .
+
+fibo-v-fnd:Referent  rdf:type         skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-rel-rel:Referent ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:definition               "the concept that another concept stands for or refers to" ;
+        skos:prefLabel                "Referent"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://grammar.about.com/od/rs/g/referentterm.htm" ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Relations" .
+
+fibo-v-ind:USD-COF11-FHLBSF
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:USD-COF11-FHLBSF ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:definition               "the FpML floating interest index for USD-COF11-FHLBSF" ;
+        skos:prefLabel                "USD-COF11-FHLBSF"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-fnd:NationalIdentificationNumber
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-aap-ppl:NationalIdentificationNumber ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:altLabel                 "national identity number" ;
+        skos:broader                  fibo-v-fnd:Identifier ;
+        skos:definition               "a number or text which appears on an identity document issued by a country or jurisdiction" ;
+        skos:prefLabel                "National Identification Number"@en ;
+        fibo-v-fnd:identifies         fibo-v-fnd:Person ;
+        fibo-v-fnd:isIssuedBy         fibo-v-be:Government ;
+        fibo-fnd-utl-av:adaptedFrom   "http://en.wikipedia.org/wiki/National_identification_number" ;
+        fibo-fnd-utl-av:explanatoryNote  "A national identification number, national identity number, or national insurance number is used by the governments of many countries as a means of tracking their citizens, permanent residents, and temporary residents for the purposes of work, taxation, government benefits, health care, and other governmentally-related functions. The number will appear on an identity document issued by a country.\n\nThe ways in which such a system is implemented are dependent on the country, but in most cases, a citizen is issued an identification number at birth or when they reach a legal age (typically the age of 18). Non-citizens may be issued such numbers when they enter the country, or when granted a temporary or permanent residence permit.\n\nMany countries issued such numbers ostensibly for a singular purpose, but over time, they become a de facto national identification number. For example, the United States originally developed its Social Security number system as a means of disbursing Social Security benefits. However, due to function creep, the number has become utilized for other purposes to the point where it is almost essential to have one to, among other things, open a bank account, obtain a credit card, or drive a car." ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "AgentsAndPeople" .
+
+fibo-v-fbc:LegalEntityIdentifierRegistryEntry
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fbc-fct-breg:LegalEntityIdentifierRegistryEntry ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:broader                  fibo-v-fbc:BusinessRegistryEntry ;
+        skos:definition               "an entry in a legal entity identifier registry that conforms to ISO 17442 and the Global Legal Entity Identifier Foundation (GLEIF) Common Data Format (CDF)" ;
+        skos:prefLabel                "Legal Entity Identifier Registry Entry"@en ;
+        fibo-v-fbc:hasRegistrationStatus  fibo-v-fbc:RegistrationStatus ;
+        fibo-v-fbc:hasValidationAuthority  fibo-v-fbc:BusinessRegistrationAuthority ;
+        fibo-v-fnd:comprises          fibo-v-be:LegalEntityIdentifier ;
+        fibo-fnd-utl-av:adaptedFrom   "https://www.gleif.org/en/about-lei/common-data-file-format/lei-cdf-format/lei-cdf-format-version-2-1" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "FunctionalEntities" .
+
+fibo-v-der:Underlier  rdf:type        skos:Concept ;
+        rdfs:isDefinedBy              fibo-der-drc-bsc:Underlier ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/DER/AboutDER/DERSpecification> ;
+        skos:broader                  fibo-v-fnd:ThingInRole ;
+        skos:definition               "the financial instrument(s), index or parameter, or combination thereof, that form the basis for the derivative instrument" ;
+        skos:editorialNote            "The underlier breaks down into two separate meanings: The item which determines the value of the contract (the observable), and the item that is deliverable upon expiry or exercise of the contract (if there is one). These are usually the same item but in some cases such as index derivatives the exercise takes a different form. Action: Add 'Observable' as a distinct term. Then use Deliverable. Is Underlier the union? In a Call Option the Underlier is the Deliverable and is referred to as the Underlier. With an Fx Call Option, the deliverable is the cash value which you are exchanging for the amount in another currency (so this is no difference as cash is instrument). Then take IR Swap where 3mo LIBOR Rate is the Observable, but the delivery is Cash. Then one would refer to the LIBOR as the Observable. Delivers an amount based on the observable, and the delivered cash is the Deliverable. So what we refer to as Underlier may be the Observable or the Deliverable e.g. Call option on IBM the deliverable is the IBM Stock whereas a Swap leg depending on LIBOR, the Deliverable is Cash but the 'Underlier' is the Observable. Would be nore accurate not to refer to the Observable not as an Underlier. Therefore there would be nothing referred to as the 'Underlier' as such. However, all derivatives have Underlier. Take an IR Cap, would not not refer to it as having an Underlier - the notion of Underlier becomes fuzzier when you get to higher order derivatives. LIBOR on a list of dates is an 'Observable' but is several amounts." ;
+        skos:prefLabel                "Underlier"@en ;
+        fibo-vocabulary:hasDomain     "Derivatives" ;
+        fibo-vocabulary:hasSubDomain  "DerivativesContracts" .
+
+fibo-v-fbc:DepositoryInstitution
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fbc-fct-fse:DepositoryInstitution ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:broader                  fibo-v-fbc:FinancialInstitution ;
+        skos:definition               "any financial institution engaged in the business of receiving demand deposits from the public or other institutions" ;
+        skos:prefLabel                "Depository Institution"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "https://www.fdic.gov/regulations/laws/rules/1000-400.html#fdic1000sec.3a" ;
+        fibo-fnd-utl-av:adaptedFrom   "12 U.S. Code Section 1813 - Definitions, see, for example, http://www.law.cornell.edu/uscode/text/12/1813" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "FunctionalEntities" .
+
+fibo-v-fnd:hasApplicableDatePeriod
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fnd-utl-alx:hasApplicableDatePeriod ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:definition               "a predicate indicating the date period for which the statistical measure is applicable" ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Utilities" .
+
+fibo-v-fbc:isRegulatedBy
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fbc-fct-rga:isRegulatedBy ;
+        rdfs:label                    "is regulated by" ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:definition               "indicates a regulatory agency that has regulatory authority for something" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "FunctionalEntities" .
+
+fibo-v-fnd:PercentageMonetaryAmount
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-acc-cur:PercentageMonetaryAmount ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:MonetaryMeasure ;
+        skos:broader                  fibo-v-fnd:Rate ;
+        skos:definition               "a measure of some amount of money expressed as a percentage of some other amount, some notional amount or some concrete money amount" ;
+        skos:editorialNote            "This will have a relationship to what it is a percentage of. Alternatively and for some applications of this term, there may be an enumerated list of possible things it is a percentage of." ;
+        skos:prefLabel                "Percentage Monetary Amount"@en ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Accounting" .
+
+fibo-v-sec:NotionalFinancialMarketplace
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-sec-sec-lst:NotionalFinancialMarketplace ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/SEC/AboutSEC/SECSpecification> ;
+        skos:broader                  fibo-v-fnd:NotionalPlace ;
+        skos:broader                  fibo-v-fbc:Market ;
+        skos:definition               "a place which is identified as a financial market but which is not a physical place such as a country or region. This may be a conceptual place such as the Eurobond market or the Global market." ;
+        skos:editorialNote            "These may still have properties such as holiday calendars, e.g. the London Interbank Market in USD has New York dates fo negotiation but pricing can changes whenever London is open." ;
+        skos:prefLabel                "Notional Financial Marketplace"@en ;
+        fibo-vocabulary:hasDomain     "Securities" ;
+        fibo-vocabulary:hasSubDomain  "Securities" .
+
+fibo-v-fnd:RegularSchedule
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-dt-fd:RegularSchedule ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:Schedule ;
+        skos:definition               "a schedule whose time intervals recur regularly" ;
+        skos:editorialNote            "The BusinessDates ontology extends 'RegularSchedule' with an optional BusinessDayAdjustment that specifies what should happen if a scheduled date falls on a weekend or a holiday." ;
+        skos:example                  "A corporate bond pays interest for 10 years starting on the first day of 2015.  Interest payments are due 15 days after the expiration of each 6 month period: on July 15 and January 16.\n\nThe payment schedule is a RegularSchedule, with these properties:\n\n* comprises: identifies the interest payment details\n* overall DatePeriod starting date is '2015-01-01', ending date is '2025-01-15', and duration is 'P10Y15D'\n* hasCount is 20 (2 payments per year for 10 years)\n* hasRecurrenceInterval is 'P6M'\n* hasRecurrenceStartDate is '2015-01-15'" ;
+        skos:example                  "A 30 year mortgage is payable monthly on the 10th of the month, starting July 2015. The mortgage is issued on June 15, 2015 so the first payment is for the period June 15-June 30, and the last payment is for June 1-14 2045.\n\nThe payment schedule is a RegularSchedule with these properties:\n\n* comprises: regular payment OccurrenceKind (with payment details)  (see the 'comprises' property of the Occurrences ontology)\n* hasInitialStub: June 15-30, 2015 for initial payment\n* hasFinalStub: June 1-14, 2045 for final payment\n* hasCount: 358\n* hasOverallPeriod starting Date: June 15, 2015 with a duration of 30 years\n* hasRecurrenceInterval: specifies 10th day of each calendar month\n* hasRecurrenceStartDate: July 1, 2015" ;
+        skos:prefLabel                "Regular Schedule"@en ;
+        fibo-v-fnd:hasBusinessDayAdjustment  fibo-v-fnd:BusinessDayAdjustment ;
+        fibo-v-fnd:hasFinalStub       fibo-v-fnd:ScheduleStub ;
+        fibo-v-fnd:hasInitialStub     fibo-v-fnd:ScheduleStub ;
+        fibo-v-fnd:hasRecurrenceInterval  fibo-v-fnd:RecurrenceInterval ;
+        fibo-v-fnd:hasRecurrenceStartDate  fibo-v-fnd:Date ;
+        fibo-v-fnd:hasStub            fibo-v-fnd:ScheduleStub ;
+        fibo-fnd-utl-av:explanatoryNote  "A RegularSchedule is a Schedule defined as a set of Dates that start on a recurrence start date and repeat after each recurrence interval.  The size of this set is defined by a count.\n\nThe 'initial ScheduleStub' associated with a RegularSchedule identifies any special treatment applied before the recurrence start date.  Similarly, a 'final ScheduleStub' identifies any special handling at the end of the recurrences.  For example, a mortgage loan that is due each calendar month may have an initial payment due before the first calendar month, or a final payment due after the last monthly payment." ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "DatesAndTimes" .
+
+fibo-v-fnd:Payment  rdf:type           skos:Concept ;
+        rdfs:isDefinedBy               fibo-fnd-pas-psch:Payment ;
+        dct:isPartOf                   <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                   fibo-v-fnd:Occurrence ;
+        skos:definition                "delivery of money in fulfillment of an obligation, such as to satisfy a claim or debt" ;
+        skos:prefLabel                 "Payment"@en ;
+        fibo-v-fnd:fulfillsObligation  fibo-v-fnd:PaymentObligation ;
+        fibo-v-fnd:hasPartyInRole      fibo-v-fnd:Payee ;
+        fibo-v-fnd:hasPartyInRole      fibo-v-fnd:Payer ;
+        fibo-v-fnd:hasPaymentAmount    fibo-v-fnd:MonetaryAmount ;
+        fibo-fnd-utl-av:adaptedFrom    "Barron's Dictionary of Business and Economics Terms, Fifth Edition, 2012" ;
+        fibo-vocabulary:hasDomain      "Foundations" ;
+        fibo-vocabulary:hasSubDomain   "ProductsAndServices" .
+
+fibo-v-fbc:MultilateralTradingFacility
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fbc-fct-mkt:MultilateralTradingFacility ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:broader                  fibo-v-fbc:Exchange ;
+        skos:definition               "a trading system that facilitates the exchange of financial instruments between multiple parties" ;
+        skos:prefLabel                "Multilateral Trading Facility"@en ;
+        fibo-v-fnd:isManagedBy        fibo-v-fbc:FinancialServiceProvider ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.investopedia.com/terms/m/multilateral_trading_facility.asp" ;
+        fibo-fnd-utl-av:explanatoryNote  "Multilateral trading facilities allow eligible contract participants to gather and transfer a variety of securities, especially instruments that may not have an official market. These facilities are often electronic systems controlled by approved market operators or larger investment banks. Traders will usually submit orders electronically, where a matching software engine is used to pair buyers with sellers." ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "FunctionalEntities" .
+
+fibo-v-ind:AverageAbsoluteDeviation
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ei-ei:AverageAbsoluteDeviation ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:altLabel                 "mean absolute deviation" ;
+        skos:broader                  fibo-v-ind:Dispersion ;
+        skos:definition               "the average of the absolute deviations from a central point" ;
+        skos:prefLabel                "Average Absolute Deviation"@en ;
+        fibo-fnd-utl-av:explanatoryNote  "The central point can be the mean, median, mode, or the result of another measure of central tendency." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "EconomicIndicators" .
+
+fibo-v-fbc:hasEntityStatus
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fbc-fct-breg:hasEntityStatus ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:definition               "indicates the status of the entity (i.e., active, inactive)" ;
+        fibo-fnd-utl-av:adaptedFrom   "https://www.gleif.org/en/about-lei/common-data-file-format/lei-cdf-format/lei-cdf-format-version-2-1" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "FunctionalEntities" .
+
+fibo-v-fbc:hasDebtAmount
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fbc-dae-dbt:hasDebtAmount ;
+        rdfs:label                    "has debt amount" ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:definition               "indicates the monetary amount of the debt" ;
+        fibo-fnd-utl-av:explanatoryNote  "Represents the total debt amount including principal and interest" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "DebtAndEquities" .
+
+fibo-v-fnd:OccurrenceBasedDate
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-dt-oc:OccurrenceBasedDate ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:CalculatedDate ;
+        skos:definition               "An OccurrenceBaseDate is a CalculatedDate that is defined with respect to the Occurrence of some OccurrenceKind. The 'hasDateValue' property of an OccurrenceBasedDate is not set until the Occurrence happens.  The 'triggeredBy' property relates an OccurrenceBasedDate to the OccurrenceKind that gives the meaning of the OccurrenceBasedDate." ;
+        skos:prefLabel                "Occurrence Based Date"@en ;
+        fibo-v-fnd:isTriggeredBy      fibo-v-fnd:OccurrenceKind ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "DatesAndTimes" .
+
+fibo-v-ind:CanadianConsumerPriceIndex
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ei-caei:CanadianConsumerPriceIndex ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-ind:ConsumerPriceIndex ;
+        skos:definition               "an economic indicator representing a measure of changes over time in the prices of a fixed basket of consumer goods and services that Canadian private households consume" ;
+        skos:prefLabel                "Canadian Consumer Price Index"@en ;
+        fibo-v-fnd:appliesTo          fibo-v-ind:CanadianHouseholdsConsumersUniverse ;
+        fibo-v-fnd:hasArgument        fibo-v-ind:CanadianHouseholdsConsumersUniverse ;
+        fibo-v-fnd:hasArgument        fibo-v-ind:FixedBasket ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www5.statcan.gc.ca/olc-cel/olc.action?ObjId=62-553-X&ObjType=2&lang=en&limit=0" ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.statcan.gc.ca/eng/start" ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "EconomicIndicators" .
+
+fibo-v-fnd:hasDateTimeStamp
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fnd-dt-fd:hasDateTimeStamp ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:definition               "identifies a specific date and time of day, including the time zone" ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "DatesAndTimes" .
+
+fibo-v-fbc:BrokerageAccount
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fbc-pas-caa:BrokerageAccount ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:broader                  fibo-v-fbc:InvestmentAccount ;
+        skos:definition               "an account offered by a broker that allows the investor to deposit funds and place investment orders" ;
+        skos:prefLabel                "Brokerage Account"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.investopedia.com/terms/b/brokerageaccount.asp" ;
+        fibo-fnd-utl-av:explanatoryNote  "The investor owns the assets contained in the brokerage account and must usually claim as income any capital gains incurred." ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "ProductsAndServices" .
+
+fibo-v-fbc:RegulatoryReport
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fbc-fct-rga:RegulatoryReport ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:broader                  fibo-v-fnd:Report ;
+        skos:definition               "a report required to support operational transparency that demonstrates compliance with some specification, law, policy, restriction, or other rule specified by a regulatory agency" ;
+        skos:prefLabel                "Regulatory Report"@en ;
+        fibo-fnd-utl-av:explanatoryNote  "Such a report may be needed for licensing, monitoring, taxation, or for other purposes that demonstrate the integrity, fairness, safety, or other capacity of a given industry, organization, or product" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "FunctionalEntities" .
+
+fibo-v-ind:FixedBasketConstituent
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ei-ei:FixedBasketConstituent ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-fbc:BasketConstituent ;
+        skos:definition               "a component of a fixed basket" ;
+        skos:prefLabel                "Fixed Basket Constituent"@en ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "EconomicIndicators" .
+
+fibo-v-be:isJurisdictionOf
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-be-ge-ge:isJurisdictionOf ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/BE/AboutBE/BESpecification> ;
+        skos:definition               "relates a jurisdiction to a polity or other government entity or court that has some level of legal authority over it" ;
+        fibo-vocabulary:hasDomain     "Business Entities" ;
+        fibo-vocabulary:hasSubDomain  "GovernmentEntities" .
+
+fibo-v-fnd:OrganizationMember
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-pty-pty:OrganizationMember ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:PartyInRole ;
+        skos:definition               "identifies that which has a membership role in some organization" ;
+        skos:prefLabel                "Organization Member"@en ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Parties" .
+
+fibo-v-fnd:appliesIn  rdf:type        owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fnd-law-jur:appliesIn ;
+        rdfs:label                    "applies in" ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:definition               "indicates the jurisdiction in which a law, regulation, or legal system applies" ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Law" .
+
+fibo-v-fbc:TradeLifecycleStage
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fbc-pas-fpas:TradeLifecycleStage ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:broader                  fibo-v-fnd:LifecycleStage ;
+        skos:definition               "a phase in the lifecycle of a trade" ;
+        skos:prefLabel                "Trade Lifecycle Stage"@en ;
+        fibo-v-fbc:succeeds           fibo-v-fbc:TradeLifecycleStage ;
+        fibo-v-fnd:classifies         fibo-v-fbc:Trade ;
+        fibo-v-fnd:comprises          fibo-v-fbc:TradeLifecycleEvent ;
+        fibo-v-fnd:hasDefinition      fibo-v-fbc:TradeLifecycle ;
+        fibo-v-fnd:isStageOf          fibo-v-fbc:TradeLifecycle ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.businessdictionary.com/definition/life-cycle.html" ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.investopedia.com/terms/p/post-trade-processing.asp" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "ProductsAndServices" .
+
+fibo-v-sec:hasActualClosingDate
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-sec-sec-iss:hasActualClosingDate ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/SEC/AboutSEC/SECSpecification> ;
+        skos:definition               "indicates the date on which an offering or transaction officially closes, in contrast with an intended or planned closing date" ;
+        fibo-vocabulary:hasDomain     "Securities" ;
+        fibo-vocabulary:hasSubDomain  "Securities" .
+
+fibo-v-sec:BasketOfIndicesConstituent
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-sec-sec-bsk:BasketOfIndicesConstituent ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/SEC/AboutSEC/SECSpecification> ;
+        skos:broader                  fibo-v-fbc:BasketConstituent ;
+        skos:definition               "a single constituent of a basket of indices" ;
+        skos:prefLabel                "Basket Of Indices Constituent"@en ;
+        fibo-fnd-utl-av:explanatoryNote  "This is a published index, defined as a part of the basket. Further notes: Not to be confused with the constituent of an index of securities." ;
+        fibo-vocabulary:hasDomain     "Securities" ;
+        fibo-vocabulary:hasSubDomain  "Securities" .
+
+fibo-v-sec:DividendOrShareCouponSchedule
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-sec-eq-sha:DividendOrShareCouponSchedule ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/SEC/AboutSEC/SECSpecification> ;
+        skos:broader                  fibo-v-fnd:PaymentSchedule ;
+        skos:broader                  fibo-v-fnd:RegularSchedule ;
+        skos:definition               "a payment schedule indicating the dates on which dividends or share coupon payments are due to be paid" ;
+        skos:prefLabel                "Dividend Or Share Coupon Schedule"@en ;
+        fibo-vocabulary:hasDomain     "Securities" ;
+        fibo-vocabulary:hasSubDomain  "Equities" .
+
+fibo-v-be:PublicPurpose
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-be-le-lp:PublicPurpose ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/BE/AboutBE/BESpecification> ;
+        skos:altLabel                 "public interest" ;
+        skos:broader                  fibo-v-fnd:Objective ;
+        skos:definition               "an objective that reflects values generally thought to be shared by and that is intended to benefit the populace as a whole" ;
+        skos:prefLabel                "Public Purpose"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.yourdictionary.com/public-purpose" ;
+        fibo-fnd-utl-av:adaptedFrom   "Barron's Dictionary of Business and Economics Terms, Fifth Edition, 2012" ;
+        fibo-vocabulary:hasDomain     "Business Entities" ;
+        fibo-vocabulary:hasSubDomain  "LegalEntities" .
+
+fibo-v-ind:PriceVolatility
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ind-ind:PriceVolatility ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-ind:Volatility ;
+        skos:definition               "a statistical measure of the rate of change in pricing for a given security or market index" ;
+        skos:editorialNote            "Volatility is modeled here using a structured collection, comprised of a series of individual prices of something (a security, index, etc., typically quoted prices), dates, and the source for those prices for some overall period of time" ;
+        skos:prefLabel                "Price Volatility"@en ;
+        fibo-v-fnd:hasArgument        fibo-v-ind:PriceStructure ;
+        fibo-fnd-utl-av:explanatoryNote  "Volatility can be determined using the standard deviation or variance among prices for the security or market index over some period of time. For a specific security, volatility may measure the amount and frequency in rapid price fluctuation. It is computed as the annualized standard deviation of the percentage change in a security's daily price." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "Indicators" .
+
+fibo-v-fbc:TradeIdentifier
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fbc-pas-fpas:TradeIdentifier ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:broader                  fibo-v-fnd:Identifier ;
+        skos:definition               "an identifier for a trade" ;
+        skos:prefLabel                "Trade Identifier"@en ;
+        fibo-v-fnd:identifies         fibo-v-fbc:Trade ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "ProductsAndServices" .
+
+fibo-v-be:JointVenturePartner
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-be-oac-cctl:JointVenturePartner ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/BE/AboutBE/BESpecification> ;
+        skos:broader                  fibo-v-be:EntityControllingParty ;
+        skos:definition               "a party in the role of joint venture partner to some venture" ;
+        skos:editorialNote            "This is part of ongoing work - legal definitions sought." ;
+        skos:prefLabel                "Joint Venture Partner"@en ;
+        fibo-vocabulary:hasDomain     "Business Entities" ;
+        fibo-vocabulary:hasSubDomain  "OwnershipAndControl" .
+
+fibo-v-be:Trustor  rdf:type           skos:Concept ;
+        rdfs:isDefinedBy              fibo-be-tr-tr:Trustor ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/BE/AboutBE/BESpecification> ;
+        skos:altLabel                 "grantor" ;
+        skos:altLabel                 "settlor" ;
+        skos:broader                  fibo-v-be:FormallyConstitutedOrganizationMember ;
+        skos:definition               "Entity that establishes a trust and place property under the protection and management of one or more trustees for the immediate or eventual benefit of ascertainable one or more beneficiaries. It is not always necessary to identify the trustor who may be also be a trustee and/or one of the beneficiaries. In legal parlance, a trustor is called a settlor in the UK and a grantor in the US, whereas in common usage he or she may also be called a creator, donor, initiator, owner, or Trust maker." ;
+        skos:prefLabel                "Trustor"@en ;
+        fibo-v-fnd:hasIdentity        fibo-v-fnd:IndependentParty ;
+        fibo-fnd-utl-av:definitionOrigin  "http://www.businessdictionary.com/definition/trustor.html" ;
+        fibo-vocabulary:hasDomain     "Business Entities" ;
+        fibo-vocabulary:hasSubDomain  "Trusts" .
+
+fibo-v-ind:HKD-Quarterly-Quarterly_Swap_Rate-11_00-ICAP
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:HKD-Quarterly-Quarterly_Swap_Rate-11_00-ICAP ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:definition               "the FpML floating interest index for HKD-Quarterly-Quarterly Swap Rate-11:00-ICAP" ;
+        skos:prefLabel                "HKD-Quarterly-Quarterly Swap Rate-11:00-ICAP"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-be:LEIEligibleEntity
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-be-le-lei:LEIEligibleEntity ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/BE/AboutBE/BESpecification> ;
+        skos:broader                  fibo-v-be:LegalPerson ;
+        skos:definition               "a legal person that qualifies to be assigned a legal entity identifier" ;
+        skos:prefLabel                "LEI Eligible Entity"@en ;
+        fibo-v-fnd:isIdentifiedBy     fibo-v-be:LegalEntityIdentifier ;
+        fibo-vocabulary:hasDomain     "Business Entities" ;
+        fibo-vocabulary:hasSubDomain  "LegalEntities" .
+
+fibo-v-sec:CallFeature
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-sec-dbt-dbti:CallFeature ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/SEC/AboutSEC/SECSpecification> ;
+        skos:altLabel                 "call provision" ;
+        skos:broader                  fibo-v-sec:TradableDebtInstrumentRedemptionProvision ;
+        skos:definition               "a redemption provision defining the rights of the issuer to buy back a security at a call price after a call protection period" ;
+        skos:prefLabel                "Call Feature"@en ;
+        fibo-v-fnd:comprises          fibo-v-sec:CallNotificationProvision ;
+        fibo-v-fnd:comprises          fibo-v-sec:CallSchedule ;
+        fibo-fnd-utl-av:adaptedFrom   "EDM Council / Quarule" ;
+        fibo-fnd-utl-av:explanatoryNote  "Most corporate and municipal bonds have ten-year call features (termed call protection by holders); government securities typically have none." ;
+        fibo-vocabulary:hasDomain     "Securities" ;
+        fibo-vocabulary:hasSubDomain  "Debt" .
+
+fibo-v-der:SwapPayingParty
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-der-drc-swp:SwapPayingParty ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/DER/AboutDER/DERSpecification> ;
+        skos:broader                  fibo-v-fnd:Payer ;
+        skos:broader                  fibo-v-der:SwapParty ;
+        skos:broader                  fibo-v-fbc:Debtor ;
+        skos:definition               "a swap party responsible for making payments for a given leg of the transaction as defined in the contract" ;
+        skos:prefLabel                "Swap Paying Party"@en ;
+        fibo-vocabulary:hasDomain     "Derivatives" ;
+        fibo-vocabulary:hasSubDomain  "DerivativesContracts" .
+
+fibo-v-fnd:isDomiciledIn
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fnd-org-fm:isDomiciledIn ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:definition               "the country in which the formal organization is officially domiciled" ;
+        fibo-fnd-utl-av:explanatoryNote  "This would normally be the country corresponding to the jurisdiction in which the formal organization is constituted or incorporated. For some primarily federal countries, the domicile is the country that makes up the federation while the jurisdiction under which the entity is registered (if it is a registered entity) would be that of some state in that federation." ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Organizations" .
+
+fibo-v-fbc:ElectronicFundsTransferService
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fbc-fct-fse:ElectronicFundsTransferService ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:altLabel                 "wire transfer service" ;
+        skos:broader                  fibo-v-fbc:FinancialService ;
+        skos:definition               "a service involving any transfer of funds other than a transaction involving a paper instrument, that is initiated through an electronic terminal, telephone, or computer and that orders or authorizes a financial institution to debit or credit an account" ;
+        skos:example                  "EFT services include transfers through automated teller machines, point-of-sale terminals, automated clearinghouse systems, telephone bill-payment plans in which periodic or recurring transfers are contemplated, and remote banking programs." ;
+        skos:prefLabel                "Electronic Funds Transfer Service"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "Barron's Dictionary of Finance and Investment Terms, Ninth Edition, 2014" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "FunctionalEntities" .
+
+fibo-v-sec:hasRelativePriceAtMaturity
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-sec-dbt-dbti:hasRelativePriceAtMaturity ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/SEC/AboutSEC/SECSpecification> ;
+        skos:definition               "indicates a relative price with respect to the face value at the time an instrument matures, namely par, discount or premium" ;
+        fibo-vocabulary:hasDomain     "Securities" ;
+        fibo-vocabulary:hasSubDomain  "Debt" .
+
+fibo-v-be:ControllingEquity
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-be-oac-opty:ControllingEquity ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/BE/AboutBE/BESpecification> ;
+        skos:broader                  fibo-v-fnd:ShareholdersEquity ;
+        skos:definition               "shareholders's equity that formally confers control in the entity, either by law or as explicitly stated in a corresponding equity instrument" ;
+        skos:prefLabel                "Controlling Equity"@en ;
+        fibo-v-fnd:confers            fibo-v-fnd:DeJureControl ;
+        fibo-vocabulary:hasDomain     "Business Entities" ;
+        fibo-vocabulary:hasSubDomain  "OwnershipAndControl" .
+
+fibo-v-ind:JPY_USD-Basis_Swaps-11_00-ICAP
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:JPY_USD-Basis_Swaps-11_00-ICAP ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:definition               "the FpML floating interest index for JPY USD-Basis Swaps-11:00-ICAP" ;
+        skos:prefLabel                "JPY USD-Basis Swaps-11:00-ICAP"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-der:FloatFloatInterestRateSwap
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-der-rtd-irswp:FloatFloatInterestRateSwap ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/DER/AboutDER/DERSpecification> ;
+        skos:altLabel                 "basis rate swap" ;
+        skos:altLabel                 "float-float interest rate swap" ;
+        skos:broader                  fibo-v-der:BasisSwap ;
+        skos:broader                  fibo-v-der:InterestRateSwap ;
+        skos:definition               "an interest rate swap that exchanges cashflows based on two different floating interest rates" ;
+        skos:prefLabel                "Float Float Interest Rate Swap"@en ;
+        fibo-v-der:exchanges          fibo-v-der:FloatingInterestRateLeg ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.investopedia.com/terms/b/basisrateswap.asp" ;
+        fibo-fnd-utl-av:explanatoryNote  "This is a swap in which two parties swap variable interest rates based on different money markets, and this is usually done to limit interest-rate risk that a company faces as a result of having differing lending and borrowing rates." ;
+        fibo-vocabulary:hasDomain     "Derivatives" ;
+        fibo-vocabulary:hasSubDomain  "RateDerivatives" .
+
+fibo-v-ind:EUR-Annual_Swap_Rate-10_00-TRADITION
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:EUR-Annual_Swap_Rate-10_00-TRADITION ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:definition               "the FpML floating interest index for EUR-Annual Swap Rate-10:00-TRADITION" ;
+        skos:prefLabel                "EUR-Annual Swap Rate-10:00-TRADITION"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-fbc:Option  rdf:type           skos:Concept ;
+        rdfs:isDefinedBy              fibo-fbc-fi-fi:Option ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:broader                  fibo-v-fbc:DerivativeInstrument ;
+        skos:definition               "a contract that grants to the holder either the privilege to purchase or the privilege to sell the assets specified at a predetermined price or formula at or within a time in the future" ;
+        skos:prefLabel                "Option"@en ;
+        fibo-fnd-utl-av:definitionOrigin  "ISO 10962, Securities and related financial instruments - Classification of Financial Instruments (CFI code), Second edition, 2001-05-01." ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "FinancialInstruments" .
+
+fibo-v-ind:CL-CLICP-Bloomberg
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:CL-CLICP-Bloomberg ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:definition               "the FpML floating interest index for CL-CLICP-Bloomberg" ;
+        skos:prefLabel                "CL-CLICP-Bloomberg"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-sec:hasRestriction
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-sec-sec-rst:hasRestriction ;
+        rdfs:label                    "has restriction" ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/SEC/AboutSEC/SECSpecification> ;
+        skos:definition               "identifies a restriction applicable to a given financial instrument or listing" ;
+        fibo-vocabulary:hasDomain     "Securities" ;
+        fibo-vocabulary:hasSubDomain  "Securities" .
+
+fibo-v-be:RegionalGovernment
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-be-ge-ge:RegionalGovernment ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/BE/AboutBE/BESpecification> ;
+        skos:altLabel                 "local government" ;
+        skos:broader                  fibo-v-be:Government ;
+        skos:definition               "an administrative body for a small geographic area, such as a county, smaller town, or other similar community" ;
+        skos:prefLabel                "Regional Government"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.businessdictionary.com/definition/local-government.html" ;
+        fibo-fnd-utl-av:explanatoryNote  "A local government will typically only have control over their specific geographical region, and cannot pass or enforce laws that will affect a wider area. Local governments can elect officials, enact taxes, and do many other things that a national government would do, just on a smaller scale." ;
+        fibo-vocabulary:hasDomain     "Business Entities" ;
+        fibo-vocabulary:hasSubDomain  "GovernmentEntities" .
+
+fibo-v-fnd:OccurrenceKind
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-dt-oc:OccurrenceKind ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:definition               "instances of OccurrenceKind are types of events, each having a description" ;
+        skos:editorialNote            "In order for other ontologies to accept FinancialDates without committing to the particular notions of 'Occurrence' and 'OccurrenceKind' that is modeled here, all aspects of Occurrences are captured in this ontolog" ;
+        skos:example                  "Trade settlement" ;
+        skos:example                  "Loan origination" ;
+        skos:prefLabel                "Occurrence Kind"@en ;
+        fibo-v-fnd:isExemplifiedBy    fibo-v-fnd:Occurrence ;
+        fibo-fnd-utl-av:explanatoryNote  "As types (or categories) of events, OccurenceKinds do not happen; OccurenceKinds describe Occurrences which happen and exemplify an OccurenceKind. As occurrences are things that actually happen, they have an actual date where as OccurenceKinds do not have an actual date." ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "DatesAndTimes" .
+
+fibo-v-fnd:EndOfMonth
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-dt-bd:EndOfMonth ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:BusinessRecurrenceInterval ;
+        skos:definition               "a business recurrence interval that indicates the last day of a calendar month, regardless of the length of that month" ;
+        skos:prefLabel                "End Of The Month"@en ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "DatesAndTimes" .
+
+fibo-v-ind:THB-THBFIX-Reference_Banks
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:THB-THBFIX-Reference_Banks ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:definition               "the FpML floating interest index for THB-THBFIX-Reference Banks" ;
+        skos:prefLabel                "THB-THBFIX-Reference Banks"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-fnd:hasDataSource
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fnd-arr-doc:hasDataSource ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:definition               "relates something, such as an agreement, contract, document, report, process, and so forth to a source of data used to analyze, develop, explain, produce, or otherwise create it (e.g., Experian provides data for a CreditReport)" ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Arrangements" .
+
+fibo-v-fnd:CalendarSpecifiedInterval
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-dt-fd:CalendarSpecifiedInterval ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:RecurrenceInterval ;
+        skos:definition               "a RecurrenceInterval that is specified as the nth day of some CalendarPeriod (such as a calendar month), and a TimeDirection (forward from the beginning of the month, or backwards from the end).\n\nThe nth day is an ordinal number, not a cardinal number. '1' means the first day of the calendar period." ;
+        skos:example                  "The 15th day of each calendar month." ;
+        skos:example                  "The last day of each quarter, specified as RelativeDay 1, and TimeDirection set to FromEnd." ;
+        skos:prefLabel                "Calendar Specified Interval"@en ;
+        fibo-v-fnd:hasCalendarPeriod  fibo-v-fnd:CalendarPeriod ;
+        fibo-v-fnd:hasTimeDirection   fibo-v-fnd:TimeDirection ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "DatesAndTimes" .
+
+fibo-v-ind:COP-IBR-OIS-COMPOUND
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:COP-IBR-OIS-COMPOUND ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:definition               "the FpML floating interest index for COP-IBR-OIS-COMPOUND" ;
+        skos:prefLabel                "COP-IBR-OIS-COMPOUND"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-fnd:CalendarPeriod
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-dt-fd:CalendarPeriod ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:TimeInterval ;
+        skos:definition               "an enumeration that indicates whether a CalendarSpecifiedDate is figured with respect to a calendar week, a calendar month, a calendar quarter, or a calendar year" ;
+        skos:editorialNote            "The terms 'calendar xxx' are intended to reinforce that these are periods on a calendar, not durations. \n\nFor example, a calendar year always starts on a January 1 and ends on a December 31. The term 'calendar year' does not mean the same thing as  a duration (an amount of time) of 1 year, nor can a calendar year start on any arbitrary day of a year.  For example, a calendar year never starts on September 1.\n\nSimilar points apply to other kinds of calendar periods, such as calendar week, calendar month, and calendar quarter." ;
+        skos:prefLabel                "Calendar Period"@en ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "DatesAndTimes" .
+
+fibo-v-fnd:EmancipatedMinor
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-aap-ppl:EmancipatedMinor ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:Minor ;
+        skos:definition               "a minor who is allowed to conduct a business or any other occupation on his or her own behalf or for their own account outside the control of a parent or guardian" ;
+        skos:prefLabel                "Emancipated Minor"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "https://en.wikipedia.org/wiki/Emancipated_minor" ;
+        fibo-fnd-utl-av:explanatoryNote  "The minor will then have full contractual capacity to conclude contracts with regard to the business. Whether parental consent is needed to achieve emancipated status varies from case to case. In some cases, court permission is necessary. Protocols vary by jurisdiction." ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "AgentsAndPeople" .
+
+fibo-v-fbc:CreditInstitutionOrInvestmentFirm
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fbc-fct-eufse:CreditInstitutionOrInvestmentFirm ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:broader                  fibo-v-fbc:FinancialInstitution ;
+        skos:definition               "a European financial institution that is a credit institution or an investment firm as defined by the European Banking Authority (EBA)" ;
+        skos:prefLabel                "Credit Institution Or Investment Firm"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32013R0575&from=EN#page=18" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "FunctionalEntities" .
+
+fibo-v-fbc:isCollateralizationOf
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fbc-dae-dbt:isCollateralizationOf ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:definition               "relates some collateral to a credit agreement or debt instrument for which the property has been pledged as security for the debt" ;
+        fibo-fnd-utl-av:adaptedFrom   "Barron's Dictionary of Business and Economics Terms, Fifth Edition, 2012" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "DebtAndEquities" .
+
+fibo-v-ind:JPY-LIBOR-Reference_Banks
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:JPY-LIBOR-Reference_Banks ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:definition               "the FpML floating interest index for JPY-LIBOR-Reference Banks" ;
+        skos:prefLabel                "JPY-LIBOR-Reference Banks"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-ind:RUB-Annual_Swap_Rate-11_00-BGCANTOR
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:RUB-Annual_Swap_Rate-11_00-BGCANTOR ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:definition               "the FpML floating interest index for RUB-Annual Swap Rate-11:00-BGCANTOR" ;
+        skos:prefLabel                "RUB-Annual Swap Rate-11:00-BGCANTOR"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-fnd:NonBindingTerms
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-agr-ctr:NonBindingTerms ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:ContractualCommitment ;
+        skos:definition               "contractual commitments that do not have binding legal standing on the issuer or holder" ;
+        skos:prefLabel                "Non-binding Terms"@en ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Agreements" .
+
+fibo-v-ind:GBP-6M_LIBOR_SWAP-CME_vs_LCH-ICAP
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:GBP-6M_LIBOR_SWAP-CME_vs_LCH-ICAP ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:definition               "the FpML floating interest index for GBP-6M LIBOR SWAP-CME vs LCH-ICAP" ;
+        skos:prefLabel                "GBP-6M LIBOR SWAP-CME Vs LCH-ICAP"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-ind:SGD-Semi-Annual_Swap_Rate-ICAP-Reference_Banks
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:SGD-Semi-Annual_Swap_Rate-ICAP-Reference_Banks ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:definition               "the FpML floating interest index for SGD-Semi-Annual Swap Rate-ICAP-Reference Banks" ;
+        skos:prefLabel                "SGD-Semi-Annual Swap Rate-ICAP-Reference Banks"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-fnd:confers  rdf:type          owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fnd-rel-rel:confers ;
+        rdfs:label                    "confers" ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:altLabel                 "invests with" ;
+        skos:definition               "grants or bestows by virtue of some authority" ;
+        fibo-fnd-utl-av:definitionOrigin  "Merriam-Webster Online Dictionary" ;
+        fibo-fnd-utl-av:explanatoryNote  "This property should be read as describing the conferral of some legal power or duty, some commitment or some social construct, and is a property of some social construct such as an agreement or some legal authority. These concepts, which would describe the kind of thing of which this is a property, and the kinds of thing in terms of which this property is framed, are outside the scope of this mode land so are not shown." ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Relations" .
+
+fibo-v-be:PublicShareholder
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-be-oac-cown:PublicShareholder ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/BE/AboutBE/BESpecification> ;
+        skos:broader                  fibo-v-be:Shareholder ;
+        skos:definition               "a shareholder that holds publicly issued shares in a listed company" ;
+        skos:prefLabel                "Public Shareholder"@en ;
+        fibo-vocabulary:hasDomain     "Business Entities" ;
+        fibo-vocabulary:hasSubDomain  "OwnershipAndControl" .
+
+fibo-v-fnd:Funds  rdf:type            skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-acc-cur:Funds ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:definition               "monetary resources associated with a currency" ;
+        skos:prefLabel                "Funds"@en ;
+        fibo-v-fnd:refersTo           fibo-v-fnd:Currency ;
+        fibo-fnd-utl-av:definitionOrigin  "Codes for the representation of currencies and funds, ISO 4217, Seventh edition, 2008-07-15, section 3.2." ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Accounting" .
+
+fibo-v-sec:SecurityOfferingDistributionType
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-sec-sec-iss:SecurityOfferingDistributionType ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/SEC/AboutSEC/SECSpecification> ;
+        skos:definition               "the type of distribution for a securities offering, including (1) primary offering - the original sale of a company's securities, in which the proceeds from the sale are received directly by the company, and (2) secondary offering - an offering of a security that has been issued previously" ;
+        skos:prefLabel                "Security Offering Distribution Type"@en ;
+        fibo-vocabulary:hasDomain     "Securities" ;
+        fibo-vocabulary:hasSubDomain  "Securities" .
+
+fibo-v-sec:SecurityUnderwriter
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-sec-sec-iss:SecurityUnderwriter ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/SEC/AboutSEC/SECSpecification> ;
+        skos:broader                  fibo-v-fbc:ThirdPartyAgent ;
+        skos:broader                  fibo-v-fbc:Underwriter ;
+        skos:broader                  fibo-v-fnd:ContractThirdParty ;
+        skos:definition               "an organization(s) responsible for raising the capital necessary for the issuance of securities on behalf of corporations and governments issuing the securities (both equity and debt)" ;
+        skos:prefLabel                "Security Underwriter"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.investopedia.com/" ;
+        fibo-vocabulary:hasDomain     "Securities" ;
+        fibo-vocabulary:hasSubDomain  "Securities" .
+
+fibo-v-fnd:Measure  rdf:type          skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-utl-alx:Measure ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:Reference ;
+        skos:definition               "an amount or degree of something; the dimensions, capacity, or amount of something ascertained by measuring" ;
+        skos:prefLabel                "Measure"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.merriam-webster.com/dictionary/measure" ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Utilities" .
+
+fibo-v-fbc:isRealizedBy
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fbc-pas-caa:isRealizedBy ;
+        rdfs:label                    "is realized by" ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:definition               "is made concrete by" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "ProductsAndServices" .
+
+fibo-v-sec:hasAcquisitionPrice
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-sec-sec-ast:hasAcquisitionPrice ;
+        rdfs:label                    "has aquisition price" ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/SEC/AboutSEC/SECSpecification> ;
+        skos:definition               "has a value as of the date of acquisition, expressed as an amount of money or goods" ;
+        fibo-vocabulary:hasDomain     "Securities" ;
+        fibo-vocabulary:hasSubDomain  "Securities" .
+
+fibo-v-ind:CHF-OIS-11_00-ICAP
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:CHF-OIS-11_00-ICAP ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:definition               "the FpML floating interest index for CHF-OIS-11:00-ICAP" ;
+        skos:prefLabel                "CHF-OIS-11:00-ICAP"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-der:hasFloatingRateCap
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-der-rtd-irswp:hasFloatingRateCap ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/DER/AboutDER/DERSpecification> ;
+        skos:definition               "indicates an optional ceiling or 'cap' on interest rates on floating rate debts" ;
+        fibo-fnd-utl-av:explanatoryNote  "Rate caps can be viewed as insurance, ensuring that the maximum borrowing rate never exceeds the specified cap level." ;
+        fibo-vocabulary:hasDomain     "Derivatives" ;
+        fibo-vocabulary:hasSubDomain  "RateDerivatives" .
+
+fibo-v-sec:NonTradableDebtInstrument
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-sec-dbt-dbti:NonTradableDebtInstrument ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/SEC/AboutSEC/SECSpecification> ;
+        skos:broader                  fibo-v-fnd:MutualContractualAgreement ;
+        skos:broader                  fibo-v-fbc:DebtInstrument ;
+        skos:definition               "a debt instrument that may not be bought or sold" ;
+        skos:example                  "Low-risk instruments such as savings bonds are examples of nonnegotiable debt instruments." ;
+        skos:prefLabel                "Non-tradable Debt Instrument"@en ;
+        fibo-v-sec:hasRedemptionProvision  fibo-v-sec:NonTradableDebtRedemptionProvision ;
+        fibo-v-sec:hasRelativePriceAtIssue  fibo-v-sec:RelativePrice ;
+        fibo-v-sec:hasRelativePriceAtRedemption  fibo-v-sec:RelativePrice ;
+        fibo-fnd-utl-av:adaptedFrom   "Non-Tradeable. (n.d.) Farlex Financial Dictionary. (2009). Retrieved December 16 2016 from http://financial-dictionary.thefreedictionary.com/Non-Tradeable" ;
+        fibo-fnd-utl-av:explanatoryNote  "Generally, a nonnegotiable instrument may be redeemed by the issuer, but this is often subject to some limitations." ;
+        fibo-vocabulary:hasDomain     "Securities" ;
+        fibo-vocabulary:hasSubDomain  "Debt" .
+
+fibo-v-ind:EUR-TEC10-CNO
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:EUR-TEC10-CNO ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:definition               "the FpML floating interest index for EUR-TEC10-CNO" ;
+        skos:prefLabel                "EUR-TEC10-CNO"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-der:SwapStreamInterestSettingRelativeDate
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-der-rtd-irswp:SwapStreamInterestSettingRelativeDate ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/DER/AboutDER/DERSpecification> ;
+        skos:broader                  fibo-v-fnd:RelativeDate ;
+        skos:definition               "a date on which an interest rate is revised is that is relative to a rate reset event" ;
+        skos:prefLabel                "Swap Stream Interest Setting Relative Date"@en ;
+        fibo-v-fnd:isRelativeTo       fibo-v-der:SwapStreamInterestRateReset ;
+        fibo-vocabulary:hasDomain     "Derivatives" ;
+        fibo-vocabulary:hasSubDomain  "RateDerivatives" .
+
+fibo-v-be:BoardMember
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-be-oac-exec:BoardMember ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/BE/AboutBE/BESpecification> ;
+        skos:broader                  fibo-v-fnd:OrganizationMember ;
+        skos:broader                  fibo-v-be:LegallyDelegatedAuthority ;
+        skos:definition               "a person who is a member of the board of directors of a corporation" ;
+        skos:prefLabel                "Board Member"@en ;
+        fibo-v-fnd:hasIdentity        fibo-v-be:LegalPerson ;
+        fibo-vocabulary:hasDomain     "Business Entities" ;
+        fibo-vocabulary:hasSubDomain  "OwnershipAndControl" .
+
+fibo-v-ind:AUD-Semi-Annual_Swap_Rate-ICAP-Reference_Banks
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:AUD-Semi-Annual_Swap_Rate-ICAP-Reference_Banks ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:definition               "the FpML floating interest index for AUD-Semi-Annual Swap Rate-ICAP-Reference Banks" ;
+        skos:prefLabel                "AUD-Semi-Annual Swap Rate-ICAP-Reference Banks"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-ind:USD-OIS-11_00-TRADITION
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-ind-ir-cm:USD-OIS-11_00-TRADITION ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/IND/AboutIND/INDSpecification> ;
+        skos:broader                  fibo-v-fbc:FloatingInterestRate ;
+        skos:broader                  fibo-v-ind:ReferenceInterestRate ;
+        skos:definition               "the FpML floating interest index for USD-OIS-11:00-TRADITION" ;
+        skos:prefLabel                "USD-OIS-11:00-TRADITION"@en ;
+        fibo-fnd-utl-av:adaptedFrom   "http://www.fpml.org/coding-scheme/floating-rate-index-2-24.xml" ;
+        fibo-fnd-utl-av:explanatoryNote  "Per 2006 ISDA Definitions or Annex to the 2000 ISDA Definitions, Section 7.1 Rate Options, as amended and supplemented through the date on which parties enter into the relevant transaction." ;
+        fibo-vocabulary:hasDomain     "Indices and Indicators" ;
+        fibo-vocabulary:hasSubDomain  "InterestRates" .
+
+fibo-v-der:SwapStreamInterestPayment
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-der-rtd-irswp:SwapStreamInterestPayment ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/DER/AboutDER/DERSpecification> ;
+        skos:broader                  fibo-v-fnd:Payment ;
+        skos:definition               "an event involving the payment of interest for a given swap leg" ;
+        skos:prefLabel                "Swap Stream Interest Payment"@en ;
+        fibo-vocabulary:hasDomain     "Derivatives" ;
+        fibo-vocabulary:hasSubDomain  "RateDerivatives" .
+
+fibo-v-der:CashflowTerms
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-der-drc-bsc:CashflowTerms ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/DER/AboutDER/DERSpecification> ;
+        skos:broader                  fibo-v-fbc:DebtTerms ;
+        skos:broader                  fibo-v-der:DerivativeTransactionTerms ;
+        skos:definition               "terms setting out a cashflow structure of payments committed to by one party to a contract" ;
+        skos:editorialNote            "Swap cashflows are known as Swapstreams and are the terms for payment to and from either party. These are defined in swap transaction messages and represent the terms of the contract implied by that transaction. Options (Nordea reviews): Cashflows are defined as Payouts. This is not the same as a model of a cashflow which is a consequence of applying some legal term for payment of interest or principal, but is a commitment expressed in purely cashflow terms. Review this though. Payout terms include: Values - values can only go up or down; Static values are defined for limits and the like. i.e. Constraints (and direction) - this covers caps and floors - these are read upward or downward Conditionality Formula relations (Input and Output): - these are values - these may have a cap or a floor on them also - these also may have Multiplication - there is also fixed margin - may have addition or substraction between these Linearity in covered in the above Timing / expiry Observaton (not terms): Probability Sensitivity" ;
+        skos:prefLabel                "Cashflow Terms"@en ;
+        fibo-vocabulary:hasDomain     "Derivatives" ;
+        fibo-vocabulary:hasSubDomain  "DerivativesContracts" .
+
+fibo-v-fnd:hasInitialStub
+        rdf:type                      owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fnd-dt-fd:hasInitialStub ;
+        rdfs:label                    "has initial stub" ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:definition               "identifies any special period at the start of a regular schedule" ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "DatesAndTimes" .
+
+fibo-v-fbc:precedes  rdf:type         owl:ObjectProperty ;
+        rdfs:isDefinedBy              fibo-fbc-pas-fpas:precedes ;
+        rdfs:subPropertyOf            skos:related ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FBC/AboutFBC/FBCSpecification> ;
+        skos:definition               "relates a product, organization, stage in a lifecycle, an event, or occurrence, such as a trade, to one that occurs before it" ;
+        fibo-fnd-utl-av:adaptedFrom   "https://www.merriam-webster.com/dictionary/precede" ;
+        fibo-vocabulary:hasDomain     "Financial Business and Commerce" ;
+        fibo-vocabulary:hasSubDomain  "ProductsAndServices" .
+
+fibo-v-be:OrganizationIdentificationScheme
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-be-le-fbo:OrganizationIdentificationScheme ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/BE/AboutBE/BESpecification> ;
+        skos:broader                  fibo-v-fnd:IdentificationScheme ;
+        skos:definition               "an identification scheme dedicated to the unique identification of organizations" ;
+        skos:prefLabel                "Organization Identification Scheme"@en ;
+        fibo-v-fnd:defines            fibo-v-be:OrganizationIdentifier ;
+        fibo-fnd-utl-av:adaptedFrom   "https://www.iso.org/obp/ui/#iso:std:iso-iec:6523:-1:ed-1:v1:en" ;
+        fibo-vocabulary:hasDomain     "Business Entities" ;
+        fibo-vocabulary:hasSubDomain  "LegalEntities" .
+
+fibo-v-fnd:ReportingParty
+        rdf:type                      skos:Concept ;
+        rdfs:isDefinedBy              fibo-fnd-arr-rep:ReportingParty ;
+        dct:isPartOf                  <https://spec.edmcouncil.org/fibo/FND/AboutFND/FNDSpecification> ;
+        skos:broader                  fibo-v-fnd:PartyInRole ;
+        skos:definition               "a party providing a report, typically in response to some contractual, legal, regulatory or other business requirement" ;
+        skos:prefLabel                "Reporting Party"@en ;
+        fibo-v-fnd:provides           fibo-v-fnd:Report ;
+        fibo-vocabulary:hasDomain     "Foundations" ;
+        fibo-vocabulary:hasSubDomain  "Arrangements" .
